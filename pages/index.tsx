@@ -1,13 +1,11 @@
 import React from 'react';
+import { NextPage } from 'next';
 import styled from 'styled-components';
+import Main from '../components/main/Main';
+import Calc from '../components/main/Calc';
 
-const Container = styled.div`
-  font-size: 21px;
-  color: gray;
-`;
-
-const index: React.FC = () => {
-  return <Container>hello</Container>;
+const index: NextPage = () => {
+  return <Main />;
 };
 
 export default index;
