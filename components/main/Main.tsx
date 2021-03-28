@@ -1,40 +1,53 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import palette from '../../styles/palette';
 
 const Container = styled.div`
   /* display: flex; */
+  width: 100%;
   position: relative;
   height: 1200px;
-  background-color: aliceblue;
+  background-color: gray;
 `;
 
 const MainContent = styled.div`
   position: absolute;
   top: 10%;
-  height: 400px;
-  background-color: aqua;
+  /* height: 400px; */
+  background-color: ${palette.gray_48};
   padding: 1rem;
 
   p {
     padding: 1rem 0rem;
   }
+
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+`;
+
+const Button = styled.button`
+  background-color: ${palette.black};
+  padding: 1rem;
+  border: 0;
 `;
 
 const Main = () => {
   return (
     <Container>
       <MainContent>
-        <h2>안녕하세요.</h2>
+        <h2>조금 더 편한 아침을 위한</h2>
         <h1>수면계산기</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum
-          dignissimos quod saepe vitae delectus assumenda reiciendis a, mollitia
-          obcaecati omnis quae illo corporis corrupti tenetur nemo praesentium
-          dolorum quisquam exercitationem?
-        </p>
+        <p>아침에 일어날때 항상 피곤하셨나요?</p>
+        <p>#꿀잠 #수면계산기</p>
         <Link href="../calc/">
-          <a>ss</a>
+          <Button></Button>
         </Link>
       </MainContent>
     </Container>

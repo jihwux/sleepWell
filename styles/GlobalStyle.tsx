@@ -7,8 +7,14 @@ const globalStyle = css`
   * {
     box-sizing: border-box;
   }
+
+  a {
+    color: ${palette.white};
+    text-decoration: none;
+  }
   body {
-    color: ${palette.black};
+    background-color: ${palette.black};
+    color: ${palette.white};
   }
 `;
 
