@@ -36,6 +36,7 @@ const Button = styled.button`
   background-color: ${palette.black};
   padding: 1rem;
   border: 0;
+  color: ${palette.white};
 `;
 
 const Main = () => {
@@ -47,7 +48,7 @@ const Main = () => {
         <p>아침에 일어날때 항상 피곤하셨나요?</p>
         <p>#꿀잠 #수면계산기</p>
         <Link href="../calc/">
-          <Button></Button>
+          <Button>시작하기</Button>
         </Link>
       </MainContent>
     </Container>
