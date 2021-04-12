@@ -7,6 +7,16 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Container } from '@material-ui/core';
+import styled from 'styled-components';
+import moment from 'react-moment';
+import Moment from 'react-moment';
+
+const Wrap = styled.div`
+  padding: 3rem;
+  width: 80%;
+  height: 300px;
+  /* align-items: center; */
+`;
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -63,7 +73,7 @@ export default function FullWidthTabs() {
   };
 
   return (
-    <Container>
+    <Container style={{ padding: '5rem' }}>
       <div className={classes.root}>
         <AppBar position="static" color="default">
           <Tabs
@@ -85,16 +95,23 @@ export default function FullWidthTabs() {
           onChangeIndex={handleChangeIndex}
         >
           <TabPanel value={value} index={0} dir={theme.direction}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quis
-            dolorem libero earum nulla perspiciatis at enim, commodi beatae
-            porro nostrum aliquid harum doloremque cum recusandae. Distinctio
-            quas facere fuga.
+            <h1>보통 잠들기까지 평균 10~20분이 걸립니다.</h1>
+            <h1>
+              아래 계산되어 있는 시간 중에 일어나면 좀더 편하게 일어날 수
+              있습니다.
+            </h1>
+            <Moment format="HH:mm" add={{ hours: 1, minutes: 44 }} />
+            <Moment format="HH:mm" add={{ hours: 3, minutes: 14 }} />
+            <Moment format="HH:mm" add={{ hours: 4, minutes: 44 }} />
+            <Moment format="HH:mm" add={{ hours: 6, minutes: 14 }} />
+            <Moment format="HH:mm" add={{ hours: 7, minutes: 44 }} />
+            <Moment format="HH:mm" add={{ hours: 9, minutes: 14 }} />
           </TabPanel>
           <TabPanel value={value} index={1} dir={theme.direction}>
-            Item Two
+            <Wrap>안녕하세요.</Wrap>
           </TabPanel>
           <TabPanel value={value} index={2} dir={theme.direction}>
-            Item Three
+            건강 뉴스 API 가져오기
           </TabPanel>
         </SwipeableViews>
       </div>
