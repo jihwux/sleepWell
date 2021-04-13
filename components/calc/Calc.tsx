@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { makeStyles, Theme, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,15 +8,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Container } from '@material-ui/core';
 import styled from 'styled-components';
-import moment from 'react-moment';
 import Moment from 'react-moment';
-
-const Wrap = styled.div`
-  padding: 3rem;
-  width: 80%;
-  height: 300px;
-  /* align-items: center; */
-`;
+import SleepTimePicker from './plan/SleepTimePicker';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -56,6 +49,15 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     width: 500,
+  },
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
   },
 }));
 
@@ -108,7 +110,7 @@ export default function FullWidthTabs() {
             <Moment format="HH:mm" add={{ hours: 9, minutes: 14 }} />
           </TabPanel>
           <TabPanel value={value} index={1} dir={theme.direction}>
-            <Wrap>안녕하세요.</Wrap>
+            <SleepTimePicker />
           </TabPanel>
           <TabPanel value={value} index={2} dir={theme.direction}>
             건강 뉴스 API 가져오기
