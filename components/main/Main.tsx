@@ -1,4 +1,5 @@
 import React from 'react';
+import { NextPage } from 'next';
 import styled from 'styled-components';
 import Link from 'next/link';
 import palette from '../../styles/palette';
@@ -39,7 +40,7 @@ const Button = styled.button`
   color: ${palette.white};
 `;
 
-const Main = () => {
+const Main: NextPage = () => {
   return (
     <Container>
       <MainContent>

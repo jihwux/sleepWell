@@ -7,9 +7,9 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Container } from '@material-ui/core';
-import styled from 'styled-components';
-import Moment from 'react-moment';
-import SleepTimePicker from './plan/SleepTimePicker';
+import SleepTimePicker from './Plan/SleepTimePicker';
+import SleepCurrentCalc from './Current/SleepCurrentCalc';
+import SleepInfo from './News/SleepInfo';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -18,7 +18,7 @@ interface TabPanelProps {
   value: any;
 }
 
-function TabPanel(props: TabPanelProps) {
+const TabPanel = (props: TabPanelProps) => {
   const { children, value, index, ...other } = props;
 
   return (
@@ -36,7 +36,7 @@ function TabPanel(props: TabPanelProps) {
       )}
     </div>
   );
-}
+};
 
 function a11yProps(index: any) {
   return {
@@ -75,48 +75,38 @@ export default function FullWidthTabs() {
   };
 
   return (
-    <Container style={{ padding: '5rem' }}>
-      <div className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            variant="fullWidth"
-            aria-label="full width tabs example"
-          >
-            <Tab label="지금 자몇 몇시에?" {...a11yProps(0)} />
-            <Tab label="이때즘 자면 몇시에?" {...a11yProps(1)} />
-            <Tab label="꿀잠 뉴스" {...a11yProps(2)} />
-          </Tabs>
-        </AppBar>
-        <SwipeableViews
-          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-          index={value}
-          onChangeIndex={handleChangeIndex}
+    // <Container style={{ padding: '5rem' }}>
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          variant="fullWidth"
+          aria-label="full width tabs example"
         >
-          <TabPanel value={value} index={0} dir={theme.direction}>
-            <h1>보통 잠들기까지 평균 10~20분이 걸립니다.</h1>
-            <h1>
-              아래 계산되어 있는 시간 중에 일어나면 좀더 편하게 일어날 수
-              있습니다.
-            </h1>
-            <Moment format="HH:mm" add={{ hours: 1, minutes: 44 }} />
-            <Moment format="HH:mm" add={{ hours: 3, minutes: 14 }} />
-            <Moment format="HH:mm" add={{ hours: 4, minutes: 44 }} />
-            <Moment format="HH:mm" add={{ hours: 6, minutes: 14 }} />
-            <Moment format="HH:mm" add={{ hours: 7, minutes: 44 }} />
-            <Moment format="HH:mm" add={{ hours: 9, minutes: 14 }} />
-          </TabPanel>
-          <TabPanel value={value} index={1} dir={theme.direction}>
-            <SleepTimePicker />
-          </TabPanel>
-          <TabPanel value={value} index={2} dir={theme.direction}>
-            건강 뉴스 API 가져오기
-          </TabPanel>
-        </SwipeableViews>
-      </div>
-    </Container>
+          <Tab label="지금 자몇 몇시에?" {...a11yProps(0)} />
+          <Tab label="이때즘 자면 몇시에?" {...a11yProps(1)} />
+          <Tab label="꿀잠 뉴스" {...a11yProps(2)} />
+        </Tabs>
+      </AppBar>
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+        <TabPanel value={value} index={0} dir={theme.direction}>
+          <SleepCurrentCalc />
+        </TabPanel>
+        <TabPanel value={value} index={1} dir={theme.direction}>
+          <SleepTimePicker />
+        </TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction}>
+          <SleepInfo />
+        </TabPanel>
+      </SwipeableViews>
+    </div>
+    // </Container>
   );
 }
