@@ -75,7 +75,6 @@ export default function FullWidthTabs() {
   };
 
   return (
-    // <Container style={{ padding: '5rem' }}>
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Tabs

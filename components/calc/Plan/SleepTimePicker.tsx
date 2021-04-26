@@ -5,43 +5,49 @@ import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 import StaticTimePicker from '@material-ui/lab/StaticTimePicker';
 import Button from '@material-ui/core/Button';
 import Moment from 'moment';
-// import Rmoment from 'react-moment';
+import { TimeType } from '../../../types/time';
 
+//interface 보단 type 일관성 있게 작성.
+
+interface ITime {
+  id: number;
+  calc: any;
+}
 const SleepTimePicker = () => {
   const [value, setValue] = useState(new Date());
-  const [times, setTimes] = useState([]);
+  const [times, setTimes] = useState<ITime[]>([]);
 
-  // console.log(times);
-
-  const handleChange = (value) => {
+  const handleChange = (value: Date | any) => {
     setValue(value); // value 사용자가 선택한 시간.
+    console.log(value);
   };
 
   const onClickTimeCalc = () => {
-    // 클릭했을때 스테이트값을 업데이트
     setTimes([
       times.concat(),
       {
         id: 1,
-        timecalc: Moment(value).add(1, 'hours').format('hh mm'),
+        calc: Moment(value).add(1, 'hours').format('hh mm'),
       },
       {
         id: 2,
-        text: Moment(value).add(2, 'hours').format('hh mm'),
+        calc: Moment(value).add(1, 'hours').format('hh mm'),
       },
       {
         id: 3,
-        text: Moment(value).add(3, 'hours').format('hh mm'),
+        calc: Moment(value).add(3, 'hours').format('hh mm'),
       },
       {
         id: 4,
-        text: Moment(value).add(4, 'hours').format('hh mm'),
+        calc: Moment(value).add(4, 'hours').format('hh mm'),
       },
       {
         id: 5,
-        text: Moment(value).add(5, 'hours').format('hh mm'),
+        calc: Moment(value).add(5, 'hours').format('hh mm'),
       },
     ]);
+
+    console.log(times);
   };
 
   return (
@@ -52,22 +58,15 @@ const SleepTimePicker = () => {
         openTo="hours"
         toolbarTitle="시간을 선택해주세요."
         value={value}
-        // time={time}
         onChange={handleChange}
         renderInput={(params) => <TextField {...params} variant="standard" />}
       />
-      <Button
-        color="primary"
-        variant="contained"
-        onClick={() => {
-          onClickTimeCalc();
-        }}
-      >
+      <Button color="primary" variant="contained" onClick={onClickTimeCalc}>
         시작하기
       </Button>
       <ul>
         {times.map((time) => (
-          <li key={time.id}> {time.text} </li>
+          <li key={time.id}> {time.calc} </li>
         ))}
       </ul>
     </LocalizationProvider>
