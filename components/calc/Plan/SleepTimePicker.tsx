@@ -10,6 +10,7 @@ import { TimeType } from '../../../types/time';
 //interface 보단 type 일관성 있게 작성.
 
 interface ITime {
+  // times : {
   id: number;
   calc: any;
 }
@@ -46,8 +47,6 @@ const SleepTimePicker = () => {
         calc: Moment(value).add(5, 'hours').format('hh mm'),
       },
     ]);
-
-    console.log(times);
   };
 
   return (
@@ -64,11 +63,13 @@ const SleepTimePicker = () => {
       <Button color="primary" variant="contained" onClick={onClickTimeCalc}>
         시작하기
       </Button>
-      <ul>
-        {times.map((time) => (
-          <li key={time.id}> {time.calc} </li>
-        ))}
-      </ul>
+      <div>
+        <ul>
+          {times.map((time, index) => (
+            <li key={index}> {time.calc} </li>
+          ))}
+        </ul>
+      </div>
     </LocalizationProvider>
   );
 };
