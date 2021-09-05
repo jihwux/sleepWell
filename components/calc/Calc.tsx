@@ -10,6 +10,7 @@ import { Container } from '@material-ui/core';
 import SleepTimePicker from './Plan/SleepTimePicker';
 import SleepCurrentCalc from './Current/SleepCurrentCalc';
 import SleepInfo from './News/SleepInfo';
+import SleepInfo2 from './News/SleepInfo';
 
 interface TabPanelProps {
   children?: React.ReactNode;
