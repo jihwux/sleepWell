@@ -75,8 +75,8 @@ module.exports = {
     },
   },
   extends: [
-    'airbnb',
-    'airbnb/hooks',
+    // 'airbnb',
+    // 'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:import/errors',

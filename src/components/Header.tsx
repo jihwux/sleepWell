@@ -1,9 +1,9 @@
-import React, { useContext  } from 'react';
+import React, { useContext } from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
-import { ThemeContext } from '../App';
-import { lightTheme, Theme } from '../theme';
-import {Link} from 'react-router-dom';
+import { ThemeContext } from '../pages/_app';
+import { lightTheme, Theme } from '../styles/theme';
 
 interface NavProps {
   navBar: string;
@@ -13,6 +13,7 @@ const NavContainer = styled('nav')<NavProps>`
   width: 100%;
   height: 63px;
   display: flex;
+  padding: 2rem;
   justify-content: center;
   align-items: center;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
@@ -62,12 +63,10 @@ const LoginButton = styled('button')<ThemeProps>`
   height: 40px;
   border-radius: 30px;
   font-size: 14px;
-  border: 1px solid #fcfcfc;
   color: ${({ theme }) => theme.text};
   &:hover {
     background: #fcfcfc;
-    color: ${({ theme }) =>
-      theme === lightTheme ? theme.mainColor : theme.body};
+    color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
     transition: all 0.1s ease-in-out;
   }
 `;
@@ -77,12 +76,10 @@ const RegisterButton = styled('button')<ThemeProps>`
   height: 40px;
   border-radius: 30px;
   font-size: 14px;
-  border: 1px solid #fcfcfc;
   color: ${({ theme }) => theme.text};
   &:hover {
     background: #fcfcfc;
-    color: ${({ theme }) =>
-      theme === lightTheme ? theme.mainColor : theme.body};
+    color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
     transition: all 0.1s ease-in-out;
   }
 `;
@@ -92,16 +89,15 @@ export default function Navigation() {
   return (
     <NavContainer navBar={theme.navBar}>
       <NavContentContainer>
-        <TitleContainer color={theme.mainColor}>React</TitleContainer>
+        <TitleContainer color={theme.mainColor}>
+          <Link href="/">
+            <a>꿀잠</a>
+          </Link>
+        </TitleContainer>
         <DarkModeToggle />
         <InfoContainer>
-          <LoginButton theme={theme}>
-          <Link to="./Test" >
-            로그인
-          </Link>
-            </LoginButton>
-          <RegisterButton theme={theme}>회원가입</RegisterButton>
-          
+          <LoginButton theme={theme}>Android</LoginButton>
+          <RegisterButton theme={theme}>Ios</RegisterButton>
         </InfoContainer>
       </NavContentContainer>
     </NavContainer>

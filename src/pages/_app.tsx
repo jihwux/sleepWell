@@ -1,9 +1,10 @@
+import { AppProps } from 'next/app';
 import React, { createContext } from 'react';
-import Router from './Router';
+import Header from '../components/Header';
+import { GlobalStyle } from '../styles/global-styles';
+import { lightTheme, darkTheme, Theme } from '../styles/theme';
 
-import { GlobalStyle } from './global-styles';
-import { lightTheme, darkTheme, Theme } from './theme';
-import { useDarkMode } from './hooks/useDarkMode';
+import { useDarkMode } from '../hooks/useDarkMode';
 
 interface ContextProps {
   theme: Theme;
@@ -17,15 +18,18 @@ export const ThemeContext = createContext<ContextProps>({
   },
 });
 
-export default function App() {
+const app = ({ Component, pageProps }: AppProps) => {
   const { theme, toggleTheme } = useDarkMode();
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <>
         <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
-        <Router />
+        <Header />
+        <Component {...pageProps} />
       </>
     </ThemeContext.Provider>
   );
-}
+};
+
+export default app;

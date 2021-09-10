@@ -37,9 +37,15 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
     a {
         text-decoration: none;
         cursor: pointer;
+        color: ${({ theme }) => theme.text};
+        transition: all 0.5s ease-in-out;
     }
     img {
         width: 100%;
         height: 100%;
+    }
+    .MuiTab-root {
+        color: inherit;
+        transition: all 0s ease-in-out;
     }
 `;

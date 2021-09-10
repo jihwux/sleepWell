@@ -1,7 +1,7 @@
 import React, { ReactElement, useContext } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../App';
-import { lightTheme, Theme } from '../theme';
+import { ThemeContext } from '../pages/_app';
+import { lightTheme, Theme } from '../styles/theme';
 
 interface ToggleProps {
   theme: Theme;
@@ -9,10 +9,10 @@ interface ToggleProps {
 
 const ToggleButton = styled('button')<ToggleProps>`
   position: fixed;
-  width: 115px;
+  width: 95px;
   height: 45px;
   right: 1.5rem;
-  bottom: 1.5rem;
+  /* bottom: 1.5rem; */
   border-radius: 30px;
   cursor: pointer;
   display: flex;
@@ -25,9 +25,7 @@ const ToggleButton = styled('button')<ToggleProps>`
   z-index: 10000;
 
   &:hover {
-    filter: brightness(
-      ${({ theme }) => (theme === lightTheme ? '0.9' : '1.13')}
-    );
+    filter: brightness(${({ theme }) => (theme === lightTheme ? '0.9' : '1.13')});
   }
 `;
 
@@ -58,7 +56,7 @@ export default function DarkModeToggle(): ReactElement {
               🌚
             </span>
           </Emoji>
-          <ModeContent>다크 모드</ModeContent>
+          <ModeContent>Dark</ModeContent>
         </>
       ) : (
         <>
@@ -67,7 +65,7 @@ export default function DarkModeToggle(): ReactElement {
               🌞
             </span>
           </Emoji>
-          <ModeContent>라이트 모드</ModeContent>
+          <ModeContent>Light</ModeContent>
         </>
       )}
     </ToggleButton>
