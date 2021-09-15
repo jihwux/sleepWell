@@ -1,19 +1,29 @@
 import React, { useContext } from 'react';
+import Image from 'next/image';
+import AndroidLogo from '../public/google-play-store (3).svg';
+// import AppstoreLogo from '../public/appleLogo.svg';
 import Link from 'next/link';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
 import { ThemeContext } from '../pages/_app';
 import { lightTheme, Theme } from '../styles/theme';
+import { useMediaQuery } from 'react-responsive';
 
 interface NavProps {
   navBar: string;
 }
-
+7;
 const NavContainer = styled('nav')<NavProps>`
   width: 100%;
   height: 63px;
   display: flex;
-  padding: 2rem;
+  /* padding: 3rem; */
+  padding: 3rem 13rem;
+
+  @media only screen and (max-width: 768px) {
+    padding: 3rem;
+  }
+
   justify-content: center;
   align-items: center;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
@@ -22,8 +32,9 @@ const NavContainer = styled('nav')<NavProps>`
 `;
 
 const NavContentContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 100%;
+  /* margin-left: rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,6 +48,11 @@ interface ColorProps {
 const TitleContainer = styled('header')<ColorProps>`
   height: 100%;
   font-size: 2rem;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+
   font-weight: 900;
   color: ${({ color }) => color};
   display: flex;
@@ -58,34 +74,37 @@ interface ThemeProps {
   theme: Theme;
 }
 
-const LoginButton = styled('button')<ThemeProps>`
-  width: 90px;
-  height: 40px;
+const Android = styled('button')<ThemeProps>`
+  width: 100%;
+  /* height: 40px; */
   border-radius: 30px;
   font-size: 14px;
   color: ${({ theme }) => theme.text};
-  &:hover {
+  /* &:hover {
     background: #fcfcfc;
     color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
     transition: all 0.1s ease-in-out;
-  }
+  } */
 `;
 
-const RegisterButton = styled('button')<ThemeProps>`
-  width: 90px;
-  height: 40px;
+const Appstore = styled('button')<ThemeProps>`
+  width: 100%;
+  /* height: 40px; */
   border-radius: 30px;
   font-size: 14px;
   color: ${({ theme }) => theme.text};
-  &:hover {
+  /* &:hover {
     background: #fcfcfc;
     color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
     transition: all 0.1s ease-in-out;
-  }
+  } */
 `;
 
 export default function Navigation() {
   const { theme } = useContext(ThemeContext);
+  const isPc = useMediaQuery({
+    query: '(min-width: 1028px)',
+  });
   return (
     <NavContainer navBar={theme.navBar}>
       <NavContentContainer>
@@ -95,10 +114,14 @@ export default function Navigation() {
           </Link>
         </TitleContainer>
         <DarkModeToggle />
-        <InfoContainer>
-          <LoginButton theme={theme}>Android</LoginButton>
-          <RegisterButton theme={theme}>Ios</RegisterButton>
-        </InfoContainer>
+        {isPc && (
+          <InfoContainer>
+            <Android theme={theme}>
+              <AndroidLogo />
+            </Android>
+            <Appstore>{/* <AppstoreLogo/> */}</Appstore>
+          </InfoContainer>
+        )}
       </NavContentContainer>
     </NavContainer>
   );

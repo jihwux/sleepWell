@@ -4,16 +4,21 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeContext } from '../../pages/_app';
 import { lightTheme, Theme } from '../../styles/theme';
+import { useMediaQuery } from 'react-responsive';
 
-interface ThemeProps {
-  theme: Theme;
-}
-
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  /* align-items: center; */
+`;
 const MainContent = styled.div`
-  position: absolute;
-  /* top: 10%; */
+  /* display */
+  /* position: absolute; */
   padding: 7rem 13rem;
+  @media only screen and (max-width: 768px) {
+    padding: 3rem;
+  }
 
   p {
     padding: 0.5rem 0rem;
@@ -54,19 +59,22 @@ const StartButton = styled('button')<ThemeProps>`
   margin-top: 2.5rem;
   /* color: ${({ theme }) => theme.text}; */
   color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
-  background: #fcfcfc;
+  background: ${({ theme }) => theme.startBackground};
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
   a {
-    color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
+    color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.mainColor)};
     transition: all 0.1s ease-in-out;
   }
   &:hover {
     transition: all 0.1s ease-in-out;
-    a {
-      color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
-      transition: all 0.1s ease-in-out;
-    }
+    filter: brightness(${({ theme }) => (theme === lightTheme ? '0.9' : '1.13')});
   }
 `;
+
+interface ThemeProps {
+  theme: Theme;
+}
 
 const Main: NextPage = () => {
   const { theme } = useContext(ThemeContext);
@@ -84,7 +92,7 @@ const Main: NextPage = () => {
           </Link>
         </StartButton>
       </MainContent>
-      {/* <BackgroundContent></BackgroundContent> */}
+      <BackgroundContent></BackgroundContent>
     </Container>
   );
 };

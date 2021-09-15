@@ -9,6 +9,7 @@ interface ThemeInterface {
     toggleBackground: string;
     mainColor: string;
     navBar: string;
+    startBackground: string;
   };
 }
 

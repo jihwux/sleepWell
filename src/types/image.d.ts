@@ -1,4 +1,8 @@
-declare module '*.svg';
-declare module 'moment' {
-  export = moment;
+declare module '*.png' {
+  const src: string;
+  export default src;
+}
+declare module '*.svg' {
+  const src: string;
+  export default src;
 }

@@ -11,8 +11,8 @@ const ToggleButton = styled('button')<ToggleProps>`
   position: fixed;
   width: 95px;
   height: 45px;
-  right: 1.5rem;
-  /* bottom: 1.5rem; */
+  right: 2rem;
+  top: 1;
   border-radius: 30px;
   cursor: pointer;
   display: flex;
