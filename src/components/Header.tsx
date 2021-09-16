@@ -116,7 +116,7 @@ export default function Navigation() {
         <DarkModeToggle />
         {isPc && (
           <InfoContainer>
-            <Android theme={theme} alt="Playstore">
+            <Android theme={theme}>
               <AndroidLogo />
             </Android>
             <Appstore>
