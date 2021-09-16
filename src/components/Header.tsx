@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import AndroidLogo from '../public/google-play-store (3).svg';
-// import AppstoreLogo from '../public/appleLogo.svg';
+import AndroidLogo from '../public/playStore.svg';
+import AppstoreLogo from '../public/appStore.png';
 import Link from 'next/link';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
@@ -116,10 +116,12 @@ export default function Navigation() {
         <DarkModeToggle />
         {isPc && (
           <InfoContainer>
-            <Android theme={theme}>
+            <Android theme={theme} alt="Playstore">
               <AndroidLogo />
             </Android>
-            <Appstore>{/* <AppstoreLogo/> */}</Appstore>
+            <Appstore>
+              <Image src={AppstoreLogo} alt="Appstore" width={44} height={44} />
+            </Appstore>
           </InfoContainer>
         )}
       </NavContentContainer>
