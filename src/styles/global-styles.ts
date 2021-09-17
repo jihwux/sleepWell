@@ -10,6 +10,7 @@ interface ThemeInterface {
     mainColor: string;
     navBar: string;
     startBackground: string;
+    mainBgOpacity: string;
   };
 }
 

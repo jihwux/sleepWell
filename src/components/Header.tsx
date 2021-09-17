@@ -63,9 +63,9 @@ const TitleContainer = styled('header')<ColorProps>`
 
 const InfoContainer = styled.div`
   width: 250px;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   transition: all 0.5s ease-in-out;
 `;
@@ -75,7 +75,7 @@ interface ThemeProps {
 }
 
 const Android = styled('button')<ThemeProps>`
-  width: 100%;
+  /* width: 100%; */
   /* height: 40px; */
   border-radius: 30px;
   font-size: 14px;
@@ -88,7 +88,7 @@ const Android = styled('button')<ThemeProps>`
 `;
 
 const Appstore = styled('button')<ThemeProps>`
-  width: 100%;
+  /* width: 100%; */
   /* height: 40px; */
   border-radius: 30px;
   font-size: 14px;

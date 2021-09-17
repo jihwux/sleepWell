@@ -10,11 +10,8 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: left;
-  /* align-items: center; */
 `;
 const MainContent = styled.div`
-  /* display */
-  /* position: absolute; */
   padding: 7rem 13rem;
   @media only screen and (max-width: 768px) {
     padding: 3rem;
@@ -41,13 +38,27 @@ const MainContent = styled.div`
 //   box-shadow: 15px 15px 0 0 red;
 // }
 
-const BackgroundContent = styled.div`
+const BackgroundContianer = styled('div')<ThemeProps>`
   position: absolute;
   bottom: 0;
+  z-index: 1;
   width: 100%;
   height: 600px;
-  background: linear-gradient(to right, #01c9ca 0%, #3886ff 100%);
   clip-path: polygon(100% 20%, 0% 100%, 100% 100%);
+  background: linear-gradient(to right, #01c9ca 0%, #3886ff 100%);
+
+  ::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(to right, #01c9ca 0%, #000 100%);
+    transition: all 0.5s ease-in-out;
+    opacity: ${({ theme }) => theme.mainBgOpacity};
+  }
 `;
 
 const StartButton = styled('button')<ThemeProps>`
@@ -57,7 +68,6 @@ const StartButton = styled('button')<ThemeProps>`
   font-size: 1rem;
   padding: 0rem;
   margin-top: 2.5rem;
-  /* color: ${({ theme }) => theme.text}; */
   color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
   background: ${({ theme }) => theme.startBackground};
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -92,7 +102,7 @@ const Main: NextPage = () => {
           </Link>
         </StartButton>
       </MainContent>
-      <BackgroundContent></BackgroundContent>
+      <BackgroundContianer theme={theme} />
     </Container>
   );
 };

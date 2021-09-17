@@ -5,6 +5,7 @@ export const lightTheme = {
   startBackground: '#e6328d',
   mainColor: '#fcfcfc',
   navBar: '#fcfcfc',
+  mainBgOpacity: '0',
 };
 
 export const darkTheme = {
@@ -14,6 +15,7 @@ export const darkTheme = {
   startBackground: '#3b3b3b',
   mainColor: '#fcfcfc',
   navBar: '#303030',
+  mainBgOpacity: '1',
 };
 
 export type Theme = typeof lightTheme;
