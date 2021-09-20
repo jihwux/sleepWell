@@ -9,7 +9,7 @@ import { useMediaQuery } from 'react-responsive';
 const Container = styled.div`
   width: 100%;
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
 `;
 const MainContent = styled.div`
   padding: 7rem 13rem;
@@ -31,13 +31,6 @@ const MainContent = styled.div`
   }
 `;
 
-// moon {
-//   width: 80px;
-//   height: 80px;
-//   border-radius: 50%;
-//   box-shadow: 15px 15px 0 0 red;
-// }
-
 const BackgroundContianer = styled('div')<ThemeProps>`
   position: absolute;
   bottom: 0;
@@ -58,6 +51,38 @@ const BackgroundContianer = styled('div')<ThemeProps>`
     background: linear-gradient(to right, #01c9ca 0%, #000 100%);
     transition: all 0.5s ease-in-out;
     opacity: ${({ theme }) => theme.mainBgOpacity};
+  }
+`;
+
+const SunMoon = styled('div')<ThemeProps>`
+  margin: 3rem 5rem;
+  border-radius: 50%;
+  background-color: ${({ theme }) => theme.sunMoonBackground};
+  box-shadow: ${({ theme }) => theme.sunMoon};
+  transition: all 0.5s ease-in-out;
+  width: 70px;
+  height: 70px;
+  background-color: #ffde00;
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010,
+    0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+
+  @keyframes sunrise {
+    0% {
+      box-shadow: none;
+    }
+  }
+
+  @keyframes rays {
+    0% {
+      box-shadow: 0 0 0 0 #ffde0080, 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020,
+        0 0 0 80px #ffde0010, 0 0 40px 100px #ffde0010;
+    }
+    100% {
+      box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010,
+        0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
+    }
   }
 `;
 
@@ -102,6 +127,7 @@ const Main: NextPage = () => {
           </Link>
         </StartButton>
       </MainContent>
+      <SunMoon theme={theme} />
       <BackgroundContianer theme={theme} />
     </Container>
   );

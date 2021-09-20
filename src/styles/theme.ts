@@ -6,6 +6,8 @@ export const lightTheme = {
   mainColor: '#fcfcfc',
   navBar: '#fcfcfc',
   mainBgOpacity: '0',
+  sunMoon: 'none',
+  sunMoonBackground: '#ffde00',
 };
 
 export const darkTheme = {
@@ -16,6 +18,8 @@ export const darkTheme = {
   mainColor: '#fcfcfc',
   navBar: '#303030',
   mainBgOpacity: '1',
+  sunMoon: '15px 15px 0 0 #ffde00',
+  sunMoonBackground: 'none',
 };
 
 export type Theme = typeof lightTheme;

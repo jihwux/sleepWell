@@ -32,11 +32,14 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         border: none;
         outline: none;
         transition: all 0.5s ease-in-out;
+        color: ${({ theme }) => theme.text};
+
     }
     ol, ul, li {
         list-style: none;
     }
     a {
+        display: block;
         text-decoration: none;
         cursor: pointer;
         color: ${({ theme }) => theme.text};
