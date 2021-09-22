@@ -24,29 +24,44 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [20, 10, 15, 5, 15, 5, 20],
+      data: [20, 10, 15, 5, 15, 5, 15, 20],
       // rtl: true,
+    },
+    {
+      label: 's',
+      data: ['깊은수면'],
+      // borderColor: Utils.CHART_COLORS.blue,
+      // backgroundColor: Utils.CHART_COLORS.blue,
+      stepped: true,
+      yAxisID: 'y2',
     },
   ],
 };
 
-const SleepGuid = () => {
-  const options = {
-    responsive: true,
-    legend: {
-      display: false,
+const options = {
+  responsive: true,
+  type: 'line',
+  scales: {
+    yAxes: {
+      ticks: {
+        display: false,
+      },
     },
-    type: 'line',
-    //   scales: {
-    //     xAxes: [{
-    //         stacked: true
-    //     }],
-    //     yAxes: [{
-    //         stacked: true
-    //     }]
-    // }
-  };
+    y2: {
+      type: 'category',
+      labels: ['깨어남', '수면중', '2단게', '깊은수면'],
+      offset: true,
+      position: 'left',
+      stack: 'demo',
+      stackWeight: 1,
+      grid: {
+        // borderColor: Utils.CHART_COLORS.blue
+      },
+    },
+  },
+};
 
+const SleepGuid = () => {
   return (
     <div>
       <h1>수면 주기</h1>
@@ -56,31 +71,7 @@ const SleepGuid = () => {
         * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에 +-5~30분 정도의 차이를 둬서 자신에게
         맞는 수면 주기를 계산하여 찾는걸 추천 드립니다!
       </p>
-      <Line
-        // type="line"
-        data={data}
-        options={options}
-        // options={{io
-        //   // legend: {
-        //   //   display: false,
-        //   // },
-        //   // scales: {
-        //   //   yAxes: [
-        //   //     {
-        //   //       ticks: {
-        //   //         // max: this.props.maxY,
-        //   //         min: 0,
-        //   //         stepSize: 3,
-        //   //       },
-        //   //     },
-        //   //   ],
-        //   // },
-        //   // title: {
-        //   //   //  display: this.props.display,
-        //   //   //  text: this.props.title
-        //   // },
-        // }}
-      />
+      <Line data={data} options={options} />
     </div>
   );
 };
