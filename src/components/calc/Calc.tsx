@@ -10,6 +10,7 @@ import SleepCurrentCalc from '../calc/Current/SleepCurrentCalc';
 import SleepTimePicker from '../calc/Plan/SleepTimePicker';
 import SleepInfo from './News/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
+import SleepGuid from '../calc/Guid/SleepGuid';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -39,9 +40,9 @@ function TabPanel(props: TabPanelProps) {
 }
 
 const useStyles = makeStyles({
-  // root: {
-  //   padding: '',
-  // },
+  root: {
+    padding: '3rem',
+  },
   tabs: {
     width: '70%',
   },
@@ -100,15 +101,13 @@ export default function VerticalTabs() {
             <Tab label="기타 요법" {...a11yProps(3)} />
           </Tabs>
           <TabPanel value={value} index={0} className={classes.tabs}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium animi voluptatum cum quos. Expedita,
-            cumque? Eius iusto autem, praesentium porro optio magnam dolorum in, commodi quasi nam, similique atque
-            iure!
+            <SleepGuid />
           </TabPanel>
           <TabPanel value={value} index={1} className={classes.tabs}>
-            <SleepTimePicker />
+            <SleepCurrentCalc />
           </TabPanel>
           <TabPanel value={value} index={2} className={classes.tabs}>
-            {/* <SleepInfo />s */}
+            <SleepTimePicker />
           </TabPanel>
           <TabPanel value={value} index={3} className={classes.tabs}>
             <SleepInfo />
@@ -152,7 +151,7 @@ export default function VerticalTabs() {
             onChangeIndex={handleChangeIndex}
           >
             <TabPanel value={value} index={0} dir={theme.direction}>
-              <SleepCurrentCalc />
+              <SleepGuid />
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
               <SleepTimePicker />
