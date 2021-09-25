@@ -41,10 +41,13 @@ function TabPanel(props: TabPanelProps) {
 
 const useStyles = makeStyles({
   root: {
-    padding: '3rem',
+    // padding: '3rem',
+    // maxWidth: '1920px',
+    // not Working use Styles..
   },
   tabs: {
     width: '70%',
+    padding: '0 3rem',
   },
 });
 
@@ -75,8 +78,10 @@ export default function VerticalTabs() {
     setValue(index);
   };
 
+  // const styles = { color: "blue", fontWeight: "bold", marginTop: "0.5rem" };
+
   return (
-    <Container maxWidth="xl" className={classes.root}>
+    <Container style={{ padding: '3rem', maxWidth: 'none' }} maxWidth="xl">
       {isPc && (
         <Box
           sx={{
