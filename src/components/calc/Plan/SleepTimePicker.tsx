@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
 import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 import StaticTimePicker from '@material-ui/lab/StaticTimePicker';
 import Button from '@material-ui/core/Button';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Moment from 'moment';
-import { TimeType } from '../../../types/time';
-
-//interface 보단 type 일관성 있게 작성.
+import { ThemeContext } from '../../../pages/_app';
+import { lightTheme, Theme } from '../../../styles/theme';
 
 interface ITime {
   // times : {
   id: number;
   calc: any;
 }
+
+interface ThemeProps {
+  theme: Theme;
+}
+const useStyles = makeStyles({
+  root: {
+    background: ${({ theme }) => theme.sunMoonBackground},
+  },
+});
+
 const SleepTimePicker = () => {
+  const classes = useStyles();
+
+  const { theme } = useContext(ThemeContext);
+
   const [value, setValue] = useState(new Date());
   const [times, setTimes] = useState<ITime[]>([]);
 
@@ -48,15 +62,18 @@ const SleepTimePicker = () => {
       },
     ]);
   };
+  // const theme = useTheme();
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticTimePicker
         ampm
+        className={classes.root}
         orientation="landscape"
         openTo="hours"
         toolbarTitle="시간을 선택해주세요."
         value={value}
+        theme={theme}
         onChange={handleChange}
         renderInput={(params) => <TextField {...params} variant="standard" />}
       />
