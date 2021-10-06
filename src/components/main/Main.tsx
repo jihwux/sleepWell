@@ -38,7 +38,7 @@ const BackgroundContianer = styled('div')<ThemeProps>`
   width: 100%;
   height: 600px;
   clip-path: polygon(100% 20%, 0% 100%, 100% 100%);
-  background: linear-gradient(to right, #01c9ca 0%, #3886ff 100%);
+  background: linear-gradient(to right, #01c9ca 40%, #3886ff 100%);
 
   ::before {
     position: absolute;
@@ -62,11 +62,8 @@ const SunMoon = styled('div')<ThemeProps>`
   transition: all 0.5s ease-in-out;
   width: 70px;
   height: 70px;
-  background-color: #ffde00;
   border-radius: 50%;
-  box-shadow: 0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 60px #ffde0020, 0 0 0 80px #ffde0010,
-    0 0 0 100px #ffde0000, 0 0 40px 100px #ffde0010;
-  animation: sunrise 2s infinite linear forwards, rays 2s 2s infinite linear;
+  /* animation: ${({ theme }) => theme.sunAmimation}; */
 
   @keyframes sunrise {
     0% {
