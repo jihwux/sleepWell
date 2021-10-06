@@ -81,13 +81,13 @@ const options = {
   },
 };
 const GuidInfo = styled.div`
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
 
   p:last-child {
     padding-top: 1.5rem;
-    font-size: 13px;
+    font-size: 14px;
 
     a {
       display: inline;
@@ -108,7 +108,7 @@ const SleepGuid = () => {
         <p>
           * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에 <br />
           +-5~30분 정도의 차이를 둬서 자신에게 맞는 수면 주기를 계산하여 찾는걸 추천 드립니다.
-          <a href="https://github.com/">자세한 설명서</a>
+          <a href="https://github.com/"> (참고 자료)</a>
         </p>
       </GuidInfo>
       {/* <h1>수면 주기</h1> */}
