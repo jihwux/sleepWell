@@ -165,7 +165,7 @@ export default function VerticalTabs() {
               Item Three
             </TabPanel>
             <TabPanel value={value} index={3} dir={theme.direction}>
-              Item Three
+              <SleepInfo />
             </TabPanel>
           </SwipeableViews>
           <Box
