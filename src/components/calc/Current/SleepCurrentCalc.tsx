@@ -4,10 +4,15 @@ import Moment from 'react-moment';
 import styled from 'styled-components';
 
 const GuidInfo = styled.div`
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
-
+  @media only screen and (max-width: 768px) {
+    padding-left: 0;
+    h1 {
+      padding: 0.5rem 0;
+    }
+  }
   h1:nth-child(3) {
     padding-top: 1rem;
   }

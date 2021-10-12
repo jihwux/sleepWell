@@ -1,7 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
-import Link from 'next/link';
 
 const data = {
   labels: ['자정', '2', '3', '4', '5', '6', '7', '8'],
@@ -84,7 +83,13 @@ const GuidInfo = styled.div`
   font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
+  @media only screen and (max-width: 768px) {
+    padding-left: 0;
 
+    p {
+      padding: 0.5rem 0;
+    }
+  }
   p:last-child {
     padding-top: 1.5rem;
     font-size: 14px;

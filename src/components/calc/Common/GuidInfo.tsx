@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const IntroContainer = styled.div`
@@ -19,6 +19,8 @@ const IntroContainer = styled.div`
   }
 `;
 
-export default function GuidInfo(): ReactElement {
+const GuidInfo = () => {
   return <IntroContainer></IntroContainer>;
-}
+};
+
+export default GuidInfo;

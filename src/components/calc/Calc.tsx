@@ -10,7 +10,7 @@ import SleepCurrentCalc from '../calc/Current/SleepCurrentCalc';
 import SleepTimePicker from '../calc/Plan/SleepTimePicker';
 import SleepInfo from './News/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
-import SleepGuid from '../calc/Guid/SleepGuid';
+import SleepGuid from './Guid/SleepGuid';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -81,103 +81,111 @@ export default function VerticalTabs() {
   // const styles = { color: "blue", fontWeight: "bold", marginTop: "0.5rem" };
 
   return (
-    <Container style={{ padding: '3rem', maxWidth: 'none' }} maxWidth="xl">
+    <div>
       {isPc && (
-        <Box
-          sx={{
-            flexGrow: 1,
-            display: 'flex',
-            // width: '70%',
-            height: 224,
-          }}
-        >
-          <Tabs
-            orientation="vertical"
-            variant="scrollable"
-            value={value}
-            onChange={handleChange}
-            aria-label="Vertical tabs example"
-            indicatorColor="secondary"
-            textColor="secondary"
-          >
-            <Tab label="가이드" {...a11yProps(0)} />
-            <Tab label="지금 자면?" {...a11yProps(1)} />
-            <Tab label="이때 자면?" {...a11yProps(2)} />
-            <Tab label="기타 요법" {...a11yProps(3)} />
-          </Tabs>
-          <TabPanel value={value} index={0} className={classes.tabs}>
-            <SleepGuid />
-          </TabPanel>
-          <TabPanel value={value} index={1} className={classes.tabs}>
-            <SleepCurrentCalc />
-          </TabPanel>
-          <TabPanel value={value} index={2} className={classes.tabs}>
-            <SleepTimePicker />
-          </TabPanel>
-          <TabPanel value={value} index={3} className={classes.tabs}>
-            <SleepInfo />
-          </TabPanel>
+        <Container style={{ padding: '2rem', maxWidth: 'none' }} maxWidth="xl">
           <Box
             sx={{
-              width: '30%',
+              flexGrow: 1,
+              display: 'flex',
+              // width: '70%',
               height: 224,
-              background: 'gray',
             }}
           >
-            광고
+            <Tabs
+              orientation="vertical"
+              variant="scrollable"
+              value={value}
+              onChange={handleChange}
+              aria-label="Vertical tabs example"
+              indicatorColor="secondary"
+              textColor="secondary"
+            >
+              <Tab label="가이드" {...a11yProps(0)} />
+              <Tab label="지금 자면?" {...a11yProps(1)} />
+              <Tab label="이때 자면?" {...a11yProps(2)} />
+              <Tab label="기타 요법" {...a11yProps(3)} />
+            </Tabs>
+            <TabPanel value={value} index={0} className={classes.tabs}>
+              <SleepGuid />
+            </TabPanel>
+            <TabPanel value={value} index={1} className={classes.tabs}>
+              <SleepCurrentCalc />
+            </TabPanel>
+            <TabPanel value={value} index={2} className={classes.tabs}>
+              <SleepTimePicker />
+            </TabPanel>
+            <TabPanel value={value} index={3} className={classes.tabs}>
+              <SleepInfo />
+            </TabPanel>
+            <Box
+              sx={{
+                width: '30%',
+                height: 224,
+                background: 'gray',
+              }}
+            >
+              광고
+            </Box>
           </Box>
-        </Box>
+        </Container>
       )}
 
       {isMobile && (
-        <Box
-          sx={{
-            padding: '0.5rem 0',
-          }}
-        >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            indicatorColor="secondary"
-            textColor="secondary"
-            variant="fullWidth"
-            // variant="scrollable"
-            scrollButtons="auto"
-            aria-label="full width tabs example"
-          >
-            <Tab label="가이드" {...a11yProps(0)} />
-            <Tab label="지금 자면?" {...a11yProps(1)} />
-            <Tab label="이때 자면?" {...a11yProps(2)} />
-            <Tab label="기타 요법" {...a11yProps(3)} />
-          </Tabs>
-          <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-            index={value}
-            onChangeIndex={handleChangeIndex}
-          >
-            <TabPanel value={value} index={0} dir={theme.direction}>
-              <SleepGuid />
-            </TabPanel>
-            <TabPanel value={value} index={1} dir={theme.direction}>
-              <SleepTimePicker />
-            </TabPanel>
-            <TabPanel value={value} index={2} dir={theme.direction}>
-              Item Three
-            </TabPanel>
-            <TabPanel value={value} index={3} dir={theme.direction}>
-              <SleepInfo />
-            </TabPanel>
-          </SwipeableViews>
+        <Container>
           <Box
             sx={{
-              height: 224,
-              background: 'gray',
+              padding: '0.5rem 0',
             }}
           >
-            광고
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              indicatorColor="secondary"
+              textColor="secondary"
+              variant="fullWidth"
+              variant="scrollable"
+              scrollButtons="auto"
+              aria-label="full width tabs example"
+            >
+              <Tab label="가이드" {...a11yProps(0)} />
+              <Tab label="지금 자면?" {...a11yProps(1)} />
+              <Tab label="이때 자면?" {...a11yProps(2)} />
+              <Tab label="기타 요법" {...a11yProps(3)} />
+              <Tab label="보조 약물 " {...a11yProps(4)} />
+            </Tabs>
+            <SwipeableViews
+              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+              index={value}
+              onChangeIndex={handleChangeIndex}
+            >
+              <TabPanel value={value} index={0} dir={theme.direction}>
+                <SleepGuid />
+              </TabPanel>
+              <TabPanel value={value} index={1} dir={theme.direction}>
+                <SleepCurrentCalc />
+              </TabPanel>
+              <TabPanel value={value} index={2} dir={theme.direction}>
+                <SleepTimePicker />
+              </TabPanel>
+              <TabPanel value={value} index={3} dir={theme.direction}>
+                <SleepInfo />
+              </TabPanel>
+              <TabPanel value={value} index={4} dir={theme.direction}>
+                <SleepInfo />
+              </TabPanel>
+            </SwipeableViews>
+            <Box
+              sx={{
+                height: 224,
+                background: 'gray',
+              }}
+            >
+              광고
+            </Box>
           </Box>
-        </Box>
+        </Container>
       )}
-    </Container>
+    </div>
   );
 }
