@@ -11,6 +11,7 @@ import SleepTimePicker from '../calc/Plan/SleepTimePicker';
 import SleepInfo from './News/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
+import Supplement from './Supplement/Supplement';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -94,7 +95,7 @@ export default function VerticalTabs() {
           >
             <Tabs
               orientation="vertical"
-              variant="scrollable"
+              variant="fullWidth"
               value={value}
               onChange={handleChange}
               aria-label="Vertical tabs example"
@@ -105,6 +106,7 @@ export default function VerticalTabs() {
               <Tab label="지금 자면?" {...a11yProps(1)} />
               <Tab label="이때 자면?" {...a11yProps(2)} />
               <Tab label="기타 요법" {...a11yProps(3)} />
+              <Tab label="보조 약물 " {...a11yProps(4)} />
             </Tabs>
             <TabPanel value={value} index={0} className={classes.tabs}>
               <SleepGuid />
@@ -117,6 +119,9 @@ export default function VerticalTabs() {
             </TabPanel>
             <TabPanel value={value} index={3} className={classes.tabs}>
               <SleepInfo />
+            </TabPanel>
+            <TabPanel value={value} index={4} className={classes.tabs}>
+              <Supplement />
             </TabPanel>
             <Box
               sx={{
@@ -143,7 +148,6 @@ export default function VerticalTabs() {
               onChange={handleChange}
               indicatorColor="secondary"
               textColor="secondary"
-              variant="fullWidth"
               variant="scrollable"
               scrollButtons="auto"
               aria-label="full width tabs example"
@@ -172,7 +176,7 @@ export default function VerticalTabs() {
                 <SleepInfo />
               </TabPanel>
               <TabPanel value={value} index={4} dir={theme.direction}>
-                <SleepInfo />
+                <Supplement />
               </TabPanel>
             </SwipeableViews>
             <Box
