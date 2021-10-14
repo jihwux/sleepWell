@@ -82,58 +82,56 @@ export default function VerticalTabs() {
   // const styles = { color: "blue", fontWeight: "bold", marginTop: "0.5rem" };
 
   return (
-    <div>
+    // <Container maxWidth="xl">
+    <Container style={{ padding: '2rem', maxWidth: 'none' }} maxWidth="xl">
       {isPc && (
-        <Container style={{ padding: '2rem', maxWidth: 'none' }} maxWidth="xl">
+        <Box
+          sx={{
+            flexGrow: 1,
+            display: 'flex',
+            height: 224,
+          }}
+        >
+          <Tabs
+            orientation="vertical"
+            variant="fullWidth"
+            value={value}
+            onChange={handleChange}
+            indicatorColor="secondary"
+            textColor="secondary"
+          >
+            <Tab label="가이드" {...a11yProps(0)} />
+            <Tab label="지금 자면?" {...a11yProps(1)} />
+            <Tab label="이때 자면?" {...a11yProps(2)} />
+            <Tab label="기타 요법" {...a11yProps(3)} />
+            <Tab label="보조 약물 " {...a11yProps(4)} />
+          </Tabs>
+          <TabPanel value={value} index={0} className={classes.tabs}>
+            <SleepGuid />
+          </TabPanel>
+          <TabPanel value={value} index={1} className={classes.tabs}>
+            <SleepCurrentCalc />
+          </TabPanel>
+          <TabPanel value={value} index={2} className={classes.tabs}>
+            <SleepTimePicker />
+          </TabPanel>
+          <TabPanel value={value} index={3} className={classes.tabs}>
+            <SleepInfo />
+          </TabPanel>
+          <TabPanel value={value} index={4} className={classes.tabs}>
+            <Supplement />
+          </TabPanel>
           <Box
             sx={{
-              flexGrow: 1,
-              display: 'flex',
-              // width: '70%',
+              width: '30%',
               height: 224,
+              background: 'gray',
             }}
           >
-            <Tabs
-              orientation="vertical"
-              variant="fullWidth"
-              value={value}
-              onChange={handleChange}
-              aria-label="Vertical tabs example"
-              indicatorColor="secondary"
-              textColor="secondary"
-            >
-              <Tab label="가이드" {...a11yProps(0)} />
-              <Tab label="지금 자면?" {...a11yProps(1)} />
-              <Tab label="이때 자면?" {...a11yProps(2)} />
-              <Tab label="기타 요법" {...a11yProps(3)} />
-              <Tab label="보조 약물 " {...a11yProps(4)} />
-            </Tabs>
-            <TabPanel value={value} index={0} className={classes.tabs}>
-              <SleepGuid />
-            </TabPanel>
-            <TabPanel value={value} index={1} className={classes.tabs}>
-              <SleepCurrentCalc />
-            </TabPanel>
-            <TabPanel value={value} index={2} className={classes.tabs}>
-              <SleepTimePicker />
-            </TabPanel>
-            <TabPanel value={value} index={3} className={classes.tabs}>
-              <SleepInfo />
-            </TabPanel>
-            <TabPanel value={value} index={4} className={classes.tabs}>
-              <Supplement />
-            </TabPanel>
-            <Box
-              sx={{
-                width: '30%',
-                height: 224,
-                background: 'gray',
-              }}
-            >
-              광고
-            </Box>
+            광고
           </Box>
-        </Container>
+        </Box>
+        // </Container>
       )}
 
       {isMobile && (
@@ -190,6 +188,6 @@ export default function VerticalTabs() {
           </Box>
         </Container>
       )}
-    </div>
+    </Container>
   );
 }
