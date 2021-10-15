@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+import DrugAron from '../../../public/aron.jpeg';
+import DrugCool from '../../../public/CoolDream.jpeg';
 
 const GuidInfo = styled.div`
   font-size: 16px;
@@ -27,9 +30,21 @@ const InfoContent = styled.div`
   }
 `;
 
-const IherbProduct = styled.div``;
+const IherbProduct = styled.div`
+  width: 600px;
+  height: 200px;
+  border: 1px solid gray;
+  display: flex;
+`;
 
-const MedicineProduct = styled.div``;
+const MedicineProduct = styled.div`
+  display: flex;
+  justfiy-content: space-around;
+
+  img {
+    padding: 0.5rem;
+  }
+`;
 
 const Supplement = () => {
   return (
@@ -43,15 +58,21 @@ const Supplement = () => {
         <dl>
           <dt>영양제</dt>
           <dd>
-            <IherbProduct />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minima corrupti debitis distinctio animi
-            voluptas nostrum quisquam iusto maiores quaerat aspernatur pariatur quibusdam necessitatibus ut illo, beatae
-            odio iste ab?
+            <IherbProduct>
+              <a href="">
+                <Image src={DrugAron} alt="Appstore" width={100} height={100} />
+              </a>
+              <a href="">마그네슘</a>
+            </IherbProduct>
+            마그네슘, L-테아닌 , L-트립토판
           </dd>
           <dt>의약품</dt>
           <dd>
             수면유도제에는 아론정, 쿨드림 등 주변 약국에서 2~3천원에 구매 가능하며 단기적으로 복용하는게 권장 됩니다.
-            <MedicineProduct />
+            <MedicineProduct>
+              <Image src={DrugAron} alt="Appstore" width={500} height={250} />
+              <Image src={DrugCool} alt="Appstore" width={500} height={250} />
+            </MedicineProduct>
           </dd>
         </dl>
       </InfoContent>
