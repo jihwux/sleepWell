@@ -7,11 +7,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import styled from 'styled-components';
 import Image from 'next/image';
 import DrugAron from '../../../public/aron.jpeg';
-import DrugCool from '../../../public/CoolDream.jpeg';
+import DrugCool from '../../../public/CoolDream.png';
+import Test from '../../../public/97_preview_rev_1.png';
 
 const GuidInfo = styled.div`
   font-size: 16px;
@@ -54,8 +56,16 @@ const MedicineProduct = styled.div`
     padding: 1rem;
   }
 `;
+const useStyles = makeStyles({
+  root: {
+    width: '100px',
+    height: '100px',
+  },
+});
 
 const Supplement = () => {
+  const classes = useStyles();
+
   return (
     <GuidInfo>
       <p>
@@ -76,16 +86,16 @@ const Supplement = () => {
               <ListItem alignItems="flex-start">
                 {/* <a href="https://mui.com/components/lists/#main-content"> */}
                 <ListItemAvatar>
-                  <Avatar alt="A " src="https://s3.images-iherb.com/lex/lex17229/v/97.jpg" />
+                  <Avatar alt="A " src={Test} className={classes.root} />
                 </ListItemAvatar>
                 <ListItemText
                   primary="Life Extension, L-트립토판, 500mg, 베지 캡슐 90정"
                   secondary={
-                    <React.Fragment>
-                      <Typography sx={{ display: 'inline' }} component="span" variant="body2">
-                        Ali Connors
-                      </Typography>
-                    </React.Fragment>
+                    <Typography>
+                      ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
+                      불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
+                      섭취하면 수면에 도움이 됩니다
+                    </Typography>
                   }
                 />
                 {/* </a> */}
@@ -93,37 +103,16 @@ const Supplement = () => {
               <Divider variant="inset" component="li" />
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
-                  <Avatar alt="Remy Sharp" src="https://s3.images-iherb.com/lex/lex17229/v/97.jpg" />
+                  <Avatar alt="Remy Sharp" src={Test} className={classes.root} />
                 </ListItemAvatar>
-                <ListItemText
-                  primary="B"
-                  secondary={
-                    <React.Fragment>
-                      <Typography sx={{ display: 'inline' }} component="span" variant="body2" color="text.primary">
-                        to Scott, Alex, Jennifer
-                      </Typography>
-                    </React.Fragment>
-                  }
-                />
+                <ListItemText primary="B" secondary={<Typography>Ali Connors</Typography>} />
               </ListItem>
               <Divider variant="inset" component="li" />
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
-                  <Avatar alt="C" src="https://s3.images-iherb.com/lex/lex17229/v/97.jpg" />
+                  <Avatar alt="C" src={Test} className={classes.root} />
                 </ListItemAvatar>
-                <ListItemText
-                  primary="Oui Oui"
-                  secondary={
-                    <React.Fragment>
-                      <Typography
-                        sx={{ display: 'inline' }}
-                        component="span"
-                        variant="body2"
-                        color="text.primary"
-                      ></Typography>
-                    </React.Fragment>
-                  }
-                />
+                <ListItemText primary="Oui Oui" secondary={<Typography>Ali Connors</Typography>} />
               </ListItem>
             </List>
             {/* </IherbProduct> */}
