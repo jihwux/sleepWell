@@ -12,8 +12,10 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import Image from 'next/image';
 import DrugAron from '../../../public/aron.jpeg';
-import DrugCool from '../../../public/CoolDream.png';
-import Test from '../../../public/97_preview_rev_1.png';
+import DrugCool from '../../../public/drug.png';
+import Magnesium from '../../../public/magnesium.png';
+import Theanine from '../../../public/theanine.png';
+import Tryptophan from '../../../public/tryptophan.png';
 
 const GuidInfo = styled.div`
   font-size: 16px;
@@ -49,9 +51,6 @@ const IherbProduct = styled.div`
 `;
 
 const MedicineProduct = styled.div`
-  display: flex;
-  padding: 2rem 0;
-
   img {
     padding: 1rem;
   }
@@ -60,6 +59,11 @@ const useStyles = makeStyles({
   root: {
     width: '100px',
     height: '100px',
+    borderStyle: 'none',
+  },
+  text: {
+    paddingTop: '1rem',
+    fontSize: '14px',
   },
 });
 
@@ -86,12 +90,12 @@ const Supplement = () => {
               <ListItem alignItems="flex-start">
                 {/* <a href="https://mui.com/components/lists/#main-content"> */}
                 <ListItemAvatar>
-                  <Avatar alt="A " src={Test} className={classes.root} />
+                  <Avatar alt="A " src={Magnesium} className={classes.root} />
                 </ListItemAvatar>
                 <ListItemText
-                  primary="Life Extension, L-트립토판, 500mg, 베지 캡슐 90정"
+                  primary="Doctor's Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정"
                   secondary={
-                    <Typography>
+                    <Typography className={classes.text}>
                       ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
                       불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
                       섭취하면 수면에 도움이 됩니다
@@ -100,30 +104,37 @@ const Supplement = () => {
                 />
                 {/* </a> */}
               </ListItem>
-              <Divider variant="inset" component="li" />
+              {/* <Divider variant="inset" component="li" /> */}
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
-                  <Avatar alt="Remy Sharp" src={Test} className={classes.root} />
+                  <Avatar alt="Remy Sharp" src={Theanine} className={classes.root} />
                 </ListItemAvatar>
-                <ListItemText primary="B" secondary={<Typography>Ali Connors</Typography>} />
+                <ListItemText
+                  primary="L-테아닌, 알파 웨이브, 긴장 완화, 진정 작용 집중 효과, 100 mg"
+                  secondary={<Typography className={classes.text}>Ali Connors</Typography>}
+                />
               </ListItem>
-              <Divider variant="inset" component="li" />
+              {/* <Divider variant="inset" component="li" /> */}
               <ListItem alignItems="flex-start">
                 <ListItemAvatar>
-                  <Avatar alt="C" src={Test} className={classes.root} />
+                  <Avatar alt="C" src={Tryptophan} className={classes.root} />
                 </ListItemAvatar>
-                <ListItemText primary="Oui Oui" secondary={<Typography>Ali Connors</Typography>} />
+                <ListItemText
+                  primary="Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정"
+                  secondary={<Typography className={classes.text}>Ali Connors</Typography>}
+                />
               </ListItem>
             </List>
             {/* </IherbProduct> */}
-            마그네슘, L-테아닌 , L-트립토판
           </dd>
           <dt>의약품</dt>
           <dd>
-            수면유도제에는 아론정, 쿨드림 등 주변 약국에서 2~3천원에 구매 가능하며 단기적으로 복용하는게 권장 됩니다.
+            아래는 일반의약품인 수면유도제입니다. 아론정, 쿨드림 등 주변 약국에서 2~4천원에 구매 가능하며 단기적으로
+            복용하는게 권장 됩니다. 전문의약품인 수면제로는 라제팜, 졸피뎀 등 수면제가 있으며 가까운 병원에 내원하여서
+            상담 후 처방을 받을 수 있습니다.
             <MedicineProduct>
-              <Image src={DrugAron} alt="Appstore" width={500} height={250} />
-              <Image src={DrugCool} alt="Appstore" width={500} height={250} />
+              {/* <Image src={DrugAron} alt="Appstore" width={500} height={250} /> */}
+              <Image src={DrugCool} alt="Appstore" width={700} height={320} />
             </MedicineProduct>
           </dd>
         </dl>
