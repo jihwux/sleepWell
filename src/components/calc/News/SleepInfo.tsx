@@ -8,17 +8,6 @@ const GuidInfo = styled.div`
   font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
-
-  @media only screen and (max-width: 768px) {
-    padding-left: 0;
-    p {
-      padding: 0.5rem 0;
-    }
-  }
-`;
-
-const InfoContent = styled.div`
-  padding-top: 3rem;
   /* max-height: 500px; */
   height: 500px;
   overflow: auto;
@@ -40,6 +29,18 @@ const InfoContent = styled.div`
     /* height: -10px; */
     width: 0px;
   }
+
+  @media only screen and (max-width: 768px) {
+    padding-left: 0;
+    p {
+      padding: 0.5rem 0;
+    }
+  }
+`;
+
+const InfoContent = styled.div`
+  padding-top: 3rem;
+
   dt {
     font-size: 1rem;
     font-weight: 600;

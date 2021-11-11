@@ -147,7 +147,8 @@ export default function VerticalTabs() {
               indicatorColor="secondary"
               textColor="secondary"
               variant="scrollable"
-              scrollButtons="auto"
+              scrollButtons
+              allowScrollButtonsMobile
               aria-label="full width tabs example"
             >
               <Tab label="가이드" {...a11yProps(0)} />

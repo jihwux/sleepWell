@@ -8,7 +8,7 @@ interface ToggleProps {
 }
 
 const ToggleButton = styled('button')<ToggleProps>`
-  position: fixed;
+  position: absolute;
   width: 95px;
   height: 45px;
   right: 2rem;

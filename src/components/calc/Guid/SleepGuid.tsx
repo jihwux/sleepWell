@@ -35,7 +35,7 @@ const data = {
 
       id: 'as',
       legend: false,
-      // data: ['깊은수면'],
+
       stepped: true,
       yAxisID: 'y2',
     },
@@ -55,13 +55,13 @@ const options = {
       },
       color: 'rgba(75,192,192,1)',
       padding: 30,
-      // textSize: '2rem',
     },
     tooltip: {
       enabled: false,
     },
   },
-  responsive: true,
+  // responsive: false,
+
   type: 'line',
   scales: {
     yAxes: {
@@ -71,11 +71,8 @@ const options = {
     },
     y2: {
       type: 'category',
-      labels: ['자기전', '얕은수면', '2단게', '깊은수면'],
+      labels: ['자기전', '얕은수면', '수면', '깊은수면'],
       offset: true,
-      // position: 'left',
-      // stack: 'demo',
-      // stackWeight: 1,
     },
   },
 };
@@ -107,7 +104,7 @@ const SleepGuid = () => {
   return (
     <div>
       <GuidInfo>
-        <p>수면은 일반적으로 4단계의 얕은수면(REM)과 깊은수면(non-REM)으로 이루어져 있습니다.</p>
+        <p>수면은 일반적으로 얕은수면(REM)과 깊은수면(non-REM)으로 이루어져 있습니다.</p>
         <p>아래 차트는 일반적인 수면 주기로 램수면과 논램수면이 주기로 반복되어 잠을 자게 됩니다.</p>
         <p>우리가 잠을 조금만 자야한다면 얕은수면(REM)단계에서 일어나면 조금 덜 피곤하게 기상할 수 있게 됩니다. </p>
         <p>
@@ -122,7 +119,7 @@ const SleepGuid = () => {
         * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에 +-5~30분 정도의 차이를 둬서 자신에게
         맞는 수면 주기를 계산하여 찾는걸 추천 드립니다!
       </p> */}
-      <Line data={data} options={options} />
+      <Line data={data} options={options} style={{ width: '100%' }} />
     </div>
   );
 };

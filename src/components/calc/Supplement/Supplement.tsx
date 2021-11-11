@@ -15,23 +15,13 @@ import DrugCool from '../../../public/drug.png';
 import Magnesium from '../../../public/magnesium.png';
 import Theanine from '../../../public/theanine.png';
 import Tryptophan from '../../../public/tryptophan.png';
+import { useMediaQuery } from 'react-responsive';
 
 const GuidInfo = styled.div`
   font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
 
-  @media only screen and (max-width: 768px) {
-    padding-left: 0;
-    p {
-      padding: 0.5rem 0;
-    }
-  }
-`;
-
-const InfoContent = styled.div`
-  padding-top: 3rem;
-  height: 500px;
   overflow-x: hidden;
   /* overflow: auto; */
   /* overflow-y: auto; */
@@ -53,6 +43,19 @@ const InfoContent = styled.div`
     /* height: -10px; */
     width: 0px;
   }
+
+  @media only screen and (max-width: 768px) {
+    padding-left: 0;
+    p {
+      padding: 0.5rem 0;
+    }
+  }
+`;
+
+const InfoContent = styled.div`
+  padding-top: 3rem;
+  // height: 500px;
+
   dt {
     font-size: 1rem;
     font-weight: 600;
@@ -71,6 +74,10 @@ const InfoContent = styled.div`
 const IherbProduct = styled.div`
   display: -webkit-inline-box;
   padding-bottom: 1.5rem;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 const ProductContainer = styled.div`
@@ -85,7 +92,13 @@ const ProductTitle = styled.div`
 
 const ProductContent = styled.div``;
 
-const ProductImage = styled.div``;
+const ProductImage = styled.div`
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+`;
 
 const MedicineProduct = styled.div`
   img {
@@ -106,6 +119,14 @@ const useStyles = makeStyles({
 
 const Supplement = () => {
   const classes = useStyles();
+
+  const isPc = useMediaQuery({
+    query: '(min-width: 1028px)',
+  });
+
+  const isMobile = useMediaQuery({
+    query: '(max-width: 1028px)',
+  });
 
   return (
     <GuidInfo>
@@ -174,15 +195,21 @@ const Supplement = () => {
             <ProductContainer>
               <IherbProduct>
                 <ProductImage>
-                  <Image src={Magnesium} alt="Appstore" width={100} height={100} />
+                  <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567">
+                    <Image src={Magnesium} alt="Appstore" width={100} height={100} />
+                  </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
+                  Doctor Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정
                   <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolores cumque illum ab fugit
-                  suscipit esse, eum doloribus earum laudantium excepturi, voluptatum consequuntur deleniti consequatur
-                  quis repudiandae iste? Quo, soluta?
+                  {isPc && (
+                    <p>
+                      트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
+                      불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
+                      섭취하면 수면에 도움이 됩니다
+                    </p>
+                  )}
                 </ProductTitle>
 
                 {/* <ProductContent>
@@ -193,15 +220,21 @@ const Supplement = () => {
               </IherbProduct>
               <IherbProduct>
                 <ProductImage>
-                  <Image src={Magnesium} alt="Appstore" width={100} height={100} />
+                  <a href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418">
+                    <Image src={Tryptophan} alt="Appstore" width={100} height={100} />
+                  </a>
                 </ProductImage>
 
                 <ProductTitle>
                   Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
                   <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolores cumque illum ab fugit
-                  suscipit esse, eum doloribus earum laudantium excepturi, voluptatum consequuntur deleniti consequatur
-                  quis repudiandae iste? Quo, soluta?
+                  {isPc && (
+                    <p>
+                      트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
+                      불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
+                      섭취하면 수면에 도움이 됩니다
+                    </p>
+                  )}
                 </ProductTitle>
 
                 {/* <ProductContent>
@@ -213,15 +246,21 @@ const Supplement = () => {
 
               <IherbProduct>
                 <ProductImage>
-                  <Image src={Magnesium} alt="Appstore" width={100} height={100} />
+                  <a href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283">
+                    <Image src={Theanine} alt="Appstore" width={100} height={100} />
+                  </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
+                  Gold Nutrition, L-테아닌, 알파웨이브, 긴장 완화 효과, 진정 및 집중 효과, 100mg, 베지 캡슐 60정
                   <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dolores cumque illum ab fugit
-                  suscipit esse, eum doloribus earum laudantium excepturi, voluptatum consequuntur deleniti consequatur
-                  quis repudiandae iste? Quo, soluta?
+                  {isPc && (
+                    <p>
+                      트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
+                      불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
+                      섭취하면 수면에 도움이 됩니다
+                    </p>
+                  )}
                 </ProductTitle>
 
                 {/* <ProductContent>
