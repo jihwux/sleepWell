@@ -21,6 +21,7 @@ const GuidInfo = styled.div`
   font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
+  height: 700px;
 
   overflow-x: hidden;
   /* overflow: auto; */
@@ -54,7 +55,7 @@ const GuidInfo = styled.div`
 
 const InfoContent = styled.div`
   padding-top: 3rem;
-  // height: 500px;
+  /* height: 500px; */
 
   dt {
     font-size: 1rem;

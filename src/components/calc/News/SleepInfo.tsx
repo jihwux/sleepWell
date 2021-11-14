@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
-import NewsList from './NewsList';
 // import GuidInfo from '../Common/GuidInfo';
 
 const GuidInfo = styled.div`
@@ -9,7 +8,7 @@ const GuidInfo = styled.div`
   line-height: 1.8rem;
   padding-left: 3rem;
   /* max-height: 500px; */
-  height: 500px;
+  height: 700px;
   overflow: auto;
   @media only screen and (max-width: 768px) {
     overflow: hidden;
