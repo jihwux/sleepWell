@@ -54,7 +54,7 @@ const BackgroundContianer = styled('div')<ThemeProps>`
   }
 `;
 
-const SunMoon = styled('div')<ThemeProps>`
+const SunMoon = styled('div')`
   margin: 3rem 5rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.sunMoonBackground};
