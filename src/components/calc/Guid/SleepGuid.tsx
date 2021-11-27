@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 const data = {
   labels: ['자정', '2', '3', '4', '5', '6', '7', '8'],
@@ -32,7 +33,6 @@ const data = {
     },
     {
       pointBorderColor: 'rgba(75,192,192,12)',
-
       id: 'as',
       legend: false,
 
@@ -76,6 +76,41 @@ const options = {
     },
   },
 };
+
+const mOptions = {
+  plugins: {
+    legend: {
+      display: false,
+    },
+    title: {
+      display: true,
+      text: '수면 주기',
+      font: {
+        size: 18,
+      },
+      color: 'rgba(75,192,192,1)',
+      padding: 30,
+    },
+    tooltip: {
+      enabled: false,
+    },
+  },
+  responsive: false,
+
+  type: 'line',
+  scales: {
+    yAxes: {
+      ticks: {
+        display: false,
+      },
+    },
+    y2: {
+      type: 'category',
+      labels: ['REM', 'NON-REM'],
+      offset: true,
+    },
+  },
+};
 const GuidInfo = styled.div`
   font-size: 16px;
   line-height: 1.8rem;
@@ -101,6 +136,14 @@ const GuidInfo = styled.div`
 `;
 
 const SleepGuid = () => {
+  const isPc = useMediaQuery({
+    query: '(min-width: 1028px)',
+  });
+
+  const isMobile = useMediaQuery({
+    query: '(max-width: 1028px)',
+  });
+
   return (
     <div>
       <GuidInfo>
@@ -119,7 +162,8 @@ const SleepGuid = () => {
         * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에 +-5~30분 정도의 차이를 둬서 자신에게
         맞는 수면 주기를 계산하여 찾는걸 추천 드립니다!
       </p> */}
-      <Line data={data} options={options} style={{ width: '100%' }} />
+      {isPc && <Line data={data} options={options} style={{ width: '100%' }} />}
+      {isMobile && <Line data={data} options={mOptions} style={{ width: '100%' }} />}
     </div>
   );
 };

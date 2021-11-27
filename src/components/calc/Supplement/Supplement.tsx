@@ -1,12 +1,4 @@
 import React from 'react';
-// import Link from 'next/link';
-// import List from '@material-ui/core/List';
-// import ListItem from '@material-ui/core/ListItem';
-// import Divider from '@material-ui/core/Divider';
-// import ListItemText from '@material-ui/core/ListItemText';
-// import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-// import Avatar from '@material-ui/core/Avatar';
-// import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import styled from 'styled-components';
@@ -140,59 +132,6 @@ const Supplement = () => {
         <dl>
           <dt>영양제</dt>
           <dd>
-            {/* <List sx={{ width: '100%' }}>
-              <ListItem alignItems="flex-start">
-                <a href="https://mui.com/components/lists/#main-content">
-                  <ListItemAvatar>
-                    <Avatar alt="A " src={Magnesium} className={classes.root} />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary="Doctor's Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정"
-                    secondary={
-                      <Typography className={classes.text}>
-                        ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
-                        불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과
-                        함께 섭취하면 수면에 도움이 됩니다
-                      </Typography>
-                    }
-                  />
-                </a>
-              </ListItem>
-              <ListItem alignItems="flex-start">
-                <a href="https://mui.com/components/lists/#main-content">
-                  <ListItemAvatar>
-                    <Avatar alt="Remy Sharp" src={Theanine} className={classes.root} />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary="L-테아닌, 알파 웨이브, 긴장 완화, 진정 작용 집중 효과, 100 mg"
-                    secondary={
-                      <Typography className={classes.text}>
-                        ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
-                        불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과
-                        함께 섭취하면 수면에 도움이 됩니다
-                      </Typography>
-                    }
-                  />
-                </a>
-              </ListItem>
-              <ListItem alignItems="flex-start">
-                <a href="https://mui.com/components/lists/#main-content">
-                  <ListItemAvatar>
-                    <Avatar alt="C" src={Tryptophan} className={classes.root} />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary="Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정"
-                    secondary={
-                      <Typography className={classes.text}>
-                        ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
-                        불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과
-                        함께 섭취하면 수면에 도움이 됩니다
-                      </Typography>
-                    }
-                  />
-                </a>
-              </ListItem>
-            </List> */}
             <ProductContainer>
               <IherbProduct>
                 <ProductImage>

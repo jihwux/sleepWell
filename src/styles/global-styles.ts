@@ -53,4 +53,17 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         color: inherit;
         transition: all 0s ease-in-out;
     }
+    .MuiClockPointer-thumb {
+        border: 16px solid #f50057 !important;
+    }
+    
+    .MuiClockPointer-root {
+        background-color : #f50057 !important;
+    }
+    .MuiClock-pin {
+        background-color : #f50057 !important;
+    }
+    .css-1t4i7pk-MuiButtonBase-root-MuiButton-root{
+        background-color: #f50057;
+    }
 `;
