@@ -20,11 +20,18 @@ const useStyles = makeStyles({
   root: {
     background: '',
   },
+  pad: {
+    paddingTop: '1rem',
+  },
+  margin: {
+    marginTop: '1rem',
+  },
 });
 
 const SleepTimePicker = () => {
   const classes = useStyles();
 
+  // const { show, setShow } = useState(true);
   const [value, setValue] = useState(new Date());
   const [times, setTimes] = useState<ITime[]>([]);
 
@@ -59,6 +66,8 @@ const SleepTimePicker = () => {
     ]);
   };
 
+  const onClickIntro = () => {};
+
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticTimePicker
@@ -71,10 +80,13 @@ const SleepTimePicker = () => {
         onChange={handleChange}
         renderInput={(params) => <TextField {...params} variant="standard" />}
       />
-      <Button color="primary" variant="contained" onClick={onClickTimeCalc}>
+      <Button color="primary" variant="contained" onClick={onClickTimeCalc} className={classes.margin}>
         시작하기
       </Button>
       <div>
+        <p style={{ display: show ? 'block' : 'none' }} onClick={onClickTimeCalc} className={classes.margin}>
+          아래는 설정한 시간에 맞춰 계산된 일반적인 수면 주기 입니다.
+        </p>
         <ul>
           {times.map((time, index) => (
             <li key={index}> {time.calc} </li>
