@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeContext } from '../../pages/_app';
 import { lightTheme, Theme } from '../../styles/theme';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -54,7 +54,7 @@ const BackgroundContianer = styled('div')<ThemeProps>`
   }
 `;
 
-const SunMoon = styled('div')`
+const SunMoon = styled('div')<ThemeProps>`
   margin: 3rem 5rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.sunMoonBackground};
@@ -63,7 +63,7 @@ const SunMoon = styled('div')`
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  /* animation: ${({ theme }) => theme.sunAmimation}; */
+  animation: ${({ theme }) => theme.sunAmimation};
 
   @keyframes sunrise {
     0% {
