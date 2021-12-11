@@ -65,5 +65,11 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
     }
     .css-1t4i7pk-MuiButtonBase-root-MuiButton-root{
         background-color: #f50057;
+        &:hover {
+        background-color: #b33662;
+        }
+    }
+    .css-4jkopv-MuiIconButton-label {
+        color: black;
     }
 `;

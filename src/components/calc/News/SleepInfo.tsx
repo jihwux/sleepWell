@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 import styled from 'styled-components';
-// import GuidInfo from '../Common/GuidInfo';
 
 const GuidInfo = styled.div`
   font-size: 16px;
@@ -16,16 +14,10 @@ const GuidInfo = styled.div`
   }
   ::-webkit-scrollbar {
     width: 2px;
-    /* background-color: black; */
-  }
-  ::-webkit-scrollbar-track {
-    /* background-color: grey; */
-    /* width: 0; */
   }
   ::-webkit-scrollbar-thumb {
     background-color: #f50057;
     border-radius: 50px;
-    /* height: -10px; */
     width: 0px;
   }
 

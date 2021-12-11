@@ -1,19 +1,15 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
 import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 import StaticTimePicker from '@material-ui/lab/StaticTimePicker';
 import Button from '@material-ui/core/Button';
-import { makeStyles, useTheme, ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Moment from 'moment';
-import { ThemeContext } from '../../../pages/_app';
-import { lightTheme, Theme } from '../../../styles/theme';
-import styled from 'styled-components';
 
 interface ITime {
-  // times : {
-  id: number;
-  calc: any;
+  id?: number;
+  calc?: any;
 }
 
 const useStyles = makeStyles({
@@ -21,17 +17,21 @@ const useStyles = makeStyles({
     background: '',
   },
   pad: {
-    paddingTop: '1rem',
+    padding: '1rem 0',
   },
   margin: {
     marginTop: '1rem',
+  },
+  font: {
+    fontSize: '1.25rem',
+    lineHeight: '2.2rem',
   },
 });
 
 const SleepTimePicker = () => {
   const classes = useStyles();
 
-  // const { show, setShow } = useState(true);
+  const [show, setShow] = useState<boolean>(false);
   const [value, setValue] = useState(new Date());
   const [times, setTimes] = useState<ITime[]>([]);
 
@@ -41,32 +41,35 @@ const SleepTimePicker = () => {
   };
 
   const onClickTimeCalc = () => {
+    setShow(true);
     setTimes([
       times.concat(),
       {
+        id: 0,
+        calc: '1단계 ' + Moment(value).add({ hours: 1, minutes: 44 }).format('hh mm'),
+      },
+      {
         id: 1,
-        calc: Moment(value).add(1, 'hours').format('hh mm'),
+        calc: '2단계 ' + Moment(value).add({ hours: 3, minutes: 14 }).format('hh mm'),
       },
       {
         id: 2,
-        calc: Moment(value).add(1, 'hours').format('hh mm'),
+        calc: '3단계 ' + Moment(value).add({ hours: 4, minutes: 44 }).format('hh mm'),
       },
       {
         id: 3,
-        calc: Moment(value).add(3, 'hours').format('hh mm'),
+        calc: '4단계 ' + Moment(value).add({ hours: 6, minutes: 14 }).format('hh mm'),
       },
       {
         id: 4,
-        calc: Moment(value).add(4, 'hours').format('hh mm'),
+        calc: '5단계 ' + Moment(value).add({ hours: 7, minutes: 44 }).format('hh mm'),
       },
       {
         id: 5,
-        calc: Moment(value).add(5, 'hours').format('hh mm'),
+        calc: '6단계 ' + Moment(value).add({ hours: 9, minutes: 14 }).format('hh mm'),
       },
     ]);
   };
-
-  const onClickIntro = () => {};
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -82,14 +85,17 @@ const SleepTimePicker = () => {
       />
       <Button color="primary" variant="contained" onClick={onClickTimeCalc} className={classes.margin}>
         시작하기
+        {/* {count} */}
       </Button>
       <div>
-        <p style={{ display: show ? 'block' : 'none' }} onClick={onClickTimeCalc} className={classes.margin}>
-          아래는 설정한 시간에 맞춰 계산된 일반적인 수면 주기 입니다.
+        <p style={{ display: show ? 'block' : 'none' }} className={classes.pad}>
+          아래는 설정한 시간에 맞춰 계산된 일반적인 수면 주기 이며 아래 시간에 기상하는게 좋습니다.
         </p>
         <ul>
           {times.map((time, index) => (
-            <li key={index}> {time.calc} </li>
+            <li key={index} className={classes.font}>
+              {time.calc}
+            </li>
           ))}
         </ul>
       </div>

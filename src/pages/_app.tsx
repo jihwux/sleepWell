@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import React, { createContext } from 'react';
-import Header from '../components/Header';
+import Header from '../components/common/Header';
 import { GlobalStyle } from '../styles/global-styles';
 import { lightTheme, darkTheme, Theme } from '../styles/theme';
 

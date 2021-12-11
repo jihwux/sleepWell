@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -18,7 +18,15 @@ interface TabPanelProps {
   dir?: string;
   index: number;
   value: number;
+  className?: any;
 }
+
+const useStyles = makeStyles({
+  tabs: {
+    width: '70%',
+    padding: '0 3rem',
+  },
+});
 
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
@@ -39,18 +47,6 @@ function TabPanel(props: TabPanelProps) {
     </div>
   );
 }
-
-const useStyles = makeStyles({
-  root: {
-    // padding: '3rem',
-    // maxWidth: '1920px',
-    // not Working use Styles..
-  },
-  tabs: {
-    width: '70%',
-    padding: '0 3rem',
-  },
-});
 
 function a11yProps(index: number) {
   return {

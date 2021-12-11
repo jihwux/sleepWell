@@ -1,12 +1,11 @@
 import React, { ReactElement, useContext } from 'react';
 import styled from 'styled-components';
-import { ThemeContext } from '../pages/_app';
-import { lightTheme, Theme } from '../styles/theme';
+import { ThemeContext } from '../../pages/_app';
+import { lightTheme, Theme } from '../../styles/theme';
 
 interface ToggleProps {
   theme: Theme;
 }
-
 const ToggleButton = styled('button')<ToggleProps>`
   position: absolute;
   width: 95px;

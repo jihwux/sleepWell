@@ -1,6 +1,4 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-
 import styled from 'styled-components';
 import Image from 'next/image';
 import DrugCool from '../../../public/drug.png';
@@ -16,24 +14,18 @@ const GuidInfo = styled.div`
   height: 700px;
 
   overflow-x: hidden;
-  /* overflow: auto; */
-  /* overflow-y: auto; */
+
   @media only screen and (max-width: 768px) {
     overflow: hidden;
     height: auto;
   }
   ::-webkit-scrollbar {
     width: 2px;
-    /* background-color: black; */
-  }
-  ::-webkit-scrollbar-track {
-    /* background-color: grey; */
-    /* width: 0; */
   }
   ::-webkit-scrollbar-thumb {
     background-color: #f50057;
     border-radius: 50px;
-    /* height: -10px; */
+
     width: 0px;
   }
 
@@ -47,7 +39,6 @@ const GuidInfo = styled.div`
 
 const InfoContent = styled.div`
   padding-top: 3rem;
-  /* height: 500px; */
 
   dt {
     font-size: 1rem;
@@ -73,17 +64,11 @@ const IherbProduct = styled.div`
   }
 `;
 
-const ProductContainer = styled.div`
-  /* width: 600px; */
-  /* height: 200px; */
-  /* border: 1px solid gray; */
-  /* display: flex; */
-`;
-const ProductTitle = styled.div`
-  width: 90%;
-`;
+const ProductContainer = styled.div``;
 
-const ProductContent = styled.div``;
+const ProductTitle = styled.div`
+  width: 85%;
+`;
 
 const ProductImage = styled.div`
   @media only screen and (max-width: 768px) {
@@ -98,27 +83,10 @@ const MedicineProduct = styled.div`
     padding: 1rem;
   }
 `;
-const useStyles = makeStyles({
-  root: {
-    width: '100px',
-    height: '100px',
-    borderStyle: 'none',
-  },
-  text: {
-    paddingTop: '1rem',
-    fontSize: '14px',
-  },
-});
 
 const Supplement = () => {
-  const classes = useStyles();
-
-  const isPc = useMediaQuery({
-    query: '(min-width: 1028px)',
-  });
-
   const isMobile = useMediaQuery({
-    query: '(max-width: 1028px)',
+    query: '(min-width: 1028px)',
   });
 
   return (
@@ -143,7 +111,7 @@ const Supplement = () => {
                 <ProductTitle>
                   Doctor Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정
                   <br />
-                  {isPc && (
+                  {isMobile && (
                     <p>
                       트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
                       불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
@@ -151,12 +119,6 @@ const Supplement = () => {
                     </p>
                   )}
                 </ProductTitle>
-
-                {/* <ProductContent>
-                  ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과 불면증
-                  같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께 섭취하면
-                  수면에 도움이 됩니다
-                </ProductContent> */}
               </IherbProduct>
               <IherbProduct>
                 <ProductImage>
@@ -168,7 +130,7 @@ const Supplement = () => {
                 <ProductTitle>
                   Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
                   <br />
-                  {isPc && (
+                  {isMobile && (
                     <p>
                       트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
                       불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
@@ -176,12 +138,6 @@ const Supplement = () => {
                     </p>
                   )}
                 </ProductTitle>
-
-                {/* <ProductContent>
-                  ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과 불면증
-                  같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께 섭취하면
-                  수면에 도움이 됩니다
-                </ProductContent> */}
               </IherbProduct>
 
               <IherbProduct>
@@ -194,7 +150,7 @@ const Supplement = () => {
                 <ProductTitle>
                   Gold Nutrition, L-테아닌, 알파웨이브, 긴장 완화 효과, 진정 및 집중 효과, 100mg, 베지 캡슐 60정
                   <br />
-                  {isPc && (
+                  {isMobile && (
                     <p>
                       트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과
                       불면증 같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께
@@ -202,20 +158,7 @@ const Supplement = () => {
                     </p>
                   )}
                 </ProductTitle>
-
-                {/* <ProductContent>
-                  ​﻿트립토판은 신경전달물질인 세로토닌의 재료가 되는 아미노산입니다. 세로토닌이 부족하면 우울증과 불면증
-                  같은 질환에 걸리기 쉽습니다. 부족하면 식욕이 증가해서 비만의 원인도 됩니다. ​ 테아닌과 함께 섭취하면
-                  수면에 도움이 됩니다
-                </ProductContent> */}
               </IherbProduct>
-
-              {/* <IherbProduct>
-                <Image src={Magnesium} alt="Appstore" width={100} height={100} />
-              </IherbProduct>
-              <IherbProduct>
-                <Image src={Magnesium} alt="Appstore" width={100} height={100} />
-              </IherbProduct> */}
             </ProductContainer>
           </dd>
           <dt>의약품</dt>
@@ -224,7 +167,6 @@ const Supplement = () => {
             복용하는게 권장 됩니다. 전문의약품인 수면제로는 라제팜, 졸피뎀 등 수면제가 있으며 가까운 병원에 내원하여서
             상담 후 처방을 받을 수 있습니다.
             <MedicineProduct>
-              {/* <Image src={DrugAron} alt="Appstore" width={500} height={250} /> */}
               <Image src={DrugCool} alt="Appstore" width={700} height={320} />
             </MedicineProduct>
           </dd>

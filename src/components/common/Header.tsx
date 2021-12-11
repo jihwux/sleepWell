@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import AndroidLogo from '../public/playStore.svg';
-import AppstoreLogo from '../public/appStore.png';
+import AndroidLogo from '../../public/playStore.svg';
+import AppstoreLogo from '../../public/appStore.png';
 import Link from 'next/link';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
-import { ThemeContext } from '../pages/_app';
-import { lightTheme, Theme } from '../styles/theme';
+import { ThemeContext } from '../../pages/_app';
+import { lightTheme, Theme } from '../../styles/theme';
 import { useMediaQuery } from 'react-responsive';
 
 interface NavProps {

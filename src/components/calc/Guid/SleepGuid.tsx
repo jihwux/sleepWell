@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 
 const data = {
-  labels: ['자정', '2', '3', '4', '5', '6', '7', '8'],
+  labels: ['자정', '1', '2', '3', '4', '5', '6', '7', '8'],
   datasets: [
     {
       label: '수면 주기',
@@ -27,7 +27,7 @@ const data = {
       // pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [20, 10, 15, 5, 15, 5, 15, 20],
+      data: [20, 15, 12, 5, 15, 5, 12, 15, 20],
       // rtl: true,
       // yAxisID: 'y1',
     },
