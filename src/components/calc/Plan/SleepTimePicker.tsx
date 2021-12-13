@@ -43,30 +43,30 @@ const SleepTimePicker = () => {
   const onClickTimeCalc = () => {
     setShow(true);
     setTimes([
-      times.concat(),
+      // times.concat(),
       {
         id: 0,
-        calc: '1단계 ' + Moment(value).add({ hours: 1, minutes: 44 }).format('hh mm'),
+        calc: '1단계 ' + Moment(value).add({ hours: 1, minutes: 44 }).format('hh:mm'),
       },
       {
         id: 1,
-        calc: '2단계 ' + Moment(value).add({ hours: 3, minutes: 14 }).format('hh mm'),
+        calc: '2단계 ' + Moment(value).add({ hours: 3, minutes: 14 }).format('hh:mm'),
       },
       {
         id: 2,
-        calc: '3단계 ' + Moment(value).add({ hours: 4, minutes: 44 }).format('hh mm'),
+        calc: '3단계 ' + Moment(value).add({ hours: 4, minutes: 44 }).format('hh:mm'),
       },
       {
         id: 3,
-        calc: '4단계 ' + Moment(value).add({ hours: 6, minutes: 14 }).format('hh mm'),
+        calc: '4단계 ' + Moment(value).add({ hours: 6, minutes: 14 }).format('hh:mm'),
       },
       {
         id: 4,
-        calc: '5단계 ' + Moment(value).add({ hours: 7, minutes: 44 }).format('hh mm'),
+        calc: '5단계 ' + Moment(value).add({ hours: 7, minutes: 44 }).format('hh:mm'),
       },
       {
         id: 5,
-        calc: '6단계 ' + Moment(value).add({ hours: 9, minutes: 14 }).format('hh mm'),
+        calc: '6단계 ' + Moment(value).add({ hours: 9, minutes: 14 }).format('hh:mm'),
       },
     ]);
   };

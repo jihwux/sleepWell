@@ -1,9 +1,10 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+// import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
+import CycleChart from './CycleChart';
 
-const data = {
+const chartData = {
   labels: ['자정', '1', '2', '3', '4', '5', '6', '7', '8'],
   datasets: [
     {
@@ -162,8 +163,10 @@ const SleepGuid = () => {
         * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에 +-5~30분 정도의 차이를 둬서 자신에게
         맞는 수면 주기를 계산하여 찾는걸 추천 드립니다!
       </p> */}
-      {isPc && <Line data={data} options={options} style={{ width: '100%' }} />}
-      {isMobile && <Line data={data} options={mOptions} style={{ width: '100%' }} />}
+      {isPc && <CycleChart data={chartData} options={options} />}
+      {isMobile && <CycleChart data={chartData} options={mOptions} />}
+      {/* {isPc && <Line data={type.data} options={options} style={{ width: '100%' }} />}
+      {isMobile && <Line data={props.data} options={mOptions} style={{ width: '100%' }} />} */}
     </div>
   );
 };
