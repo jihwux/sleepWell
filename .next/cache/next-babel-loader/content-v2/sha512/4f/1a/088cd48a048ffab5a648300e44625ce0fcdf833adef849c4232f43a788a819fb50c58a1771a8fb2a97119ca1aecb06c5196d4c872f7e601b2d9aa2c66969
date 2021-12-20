@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\nimport Calc from '../../components/calc/Calc';\n\nconst index = () => {\n  return /*#__PURE__*/_jsx(Calc, {});\n};\n\nexport default index;","map":null,"metadata":{},"sourceType":"module"}
