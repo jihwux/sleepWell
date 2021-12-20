@@ -89,6 +89,10 @@ module.exports = {
   plugins: ['@typescript-eslint', 'react'],
   rules: {
     '@typescript-eslint/quotes': ['error', 'single'],
+
+    '@typescript-eslint/explicit-function-return-type': {
+      allowExpressions: true,
+    },
   },
 };
 
