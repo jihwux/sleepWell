@@ -10,6 +10,7 @@
 
 # production
 /build
+/.next
 /.storybook
 
 # misc

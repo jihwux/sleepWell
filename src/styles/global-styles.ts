@@ -64,12 +64,15 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         background-color : #f50057 !important;
     }
     .css-1t4i7pk-MuiButtonBase-root-MuiButton-root{
-        background-color: #f50057;
+        background-color: #f50057 !important;
         &:hover {
-        background-color: #b33662;
+        background-color: #b33662 !important;
         }
     }
     .css-4jkopv-MuiIconButton-label {
         color: black;
+    }
+    .css-1h08vn0-MuiButtonBase-root-MuiTab-root.Mui-selected {
+        color: #f50057;
     }
 `;

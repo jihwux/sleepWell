@@ -104,7 +104,7 @@ const Supplement = () => {
               <IherbProduct>
                 <ProductImage>
                   <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567">
-                    <Image src={Magnesium} alt="Appstore" width={100} height={100} />
+                    <Image src={Magnesium} width={100} height={100} priority={true} />
                   </a>
                 </ProductImage>
 
@@ -123,7 +123,7 @@ const Supplement = () => {
               <IherbProduct>
                 <ProductImage>
                   <a href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418">
-                    <Image src={Tryptophan} alt="Appstore" width={100} height={100} />
+                    <Image src={Tryptophan} width={100} height={100} priority={true} />
                   </a>
                 </ProductImage>
 
@@ -143,7 +143,7 @@ const Supplement = () => {
               <IherbProduct>
                 <ProductImage>
                   <a href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283">
-                    <Image src={Theanine} alt="Appstore" width={100} height={100} />
+                    <Image src={Theanine} width={100} height={100} placeholder="blur" alt="image with blur support" />
                   </a>
                 </ProductImage>
 
@@ -167,7 +167,7 @@ const Supplement = () => {
             복용하는게 권장 됩니다. 전문의약품인 수면제로는 라제팜, 졸피뎀 등 수면제가 있으며 가까운 병원에 내원하여서
             상담 후 처방을 받을 수 있습니다.
             <MedicineProduct>
-              <Image src={DrugCool} alt="Appstore" width={700} height={320} />
+              <Image src={DrugCool} width={700} height={320} placeholder="blur" alt="image with blur support" />
             </MedicineProduct>
           </dd>
         </dl>

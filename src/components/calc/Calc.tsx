@@ -94,7 +94,7 @@ export default function VerticalTabs() {
             value={value}
             onChange={handleChange}
             indicatorColor="secondary"
-            textColor="secondary"
+            // textColor="secondary"
           >
             <Tab label="가이드" {...a11yProps(0)} />
             <Tab label="지금 자면?" {...a11yProps(1)} />

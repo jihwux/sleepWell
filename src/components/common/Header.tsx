@@ -12,7 +12,6 @@ import { useMediaQuery } from 'react-responsive';
 interface NavProps {
   navBar: string;
 }
-7;
 const NavContainer = styled('nav')<NavProps>`
   width: 100%;
   height: 63px;
