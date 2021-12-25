@@ -73,6 +73,6 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         color: black;
     }
     .css-1h08vn0-MuiButtonBase-root-MuiTab-root.Mui-selected {
-        color: #f50057;
+        color: #f50057 !important;
     }
 `;

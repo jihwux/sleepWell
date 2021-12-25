@@ -1,5 +1,20 @@
 const withImages = require('next-images');
-module.exports = withImages();
+module.exports = withImages({
+  images: {
+    disableStaticImages: true,
+  },
+  oaders: [
+    {
+      test: /\.(gif|svg|jpg|png)$/,
+      loader: 'file-loader',
+    },
+  ],
+});
+
+// module.exports = {
+
+// };
+
 //  `next.config.js` 작성하기
 // module.exports = {
 //   webpack(config) {

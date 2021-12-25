@@ -141,7 +141,7 @@ export default function VerticalTabs() {
               value={value}
               onChange={handleChange}
               indicatorColor="secondary"
-              textColor="secondary"
+              // textColor="secondary"
               variant="scrollable"
               scrollButtons
               allowScrollButtonsMobile

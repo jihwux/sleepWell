@@ -1,6 +1,6 @@
 export const lightTheme = {
   body: '#fcfcfc',
-  text: '#363537',
+  text: '#363537 !important',
   toggleBackground: '#fcfcfc',
   startBackground: '#e6328d',
   mainColor: '#fcfcfc',
@@ -13,7 +13,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   body: '#252424',
-  text: '#fcfcfc',
+  text: '#fcfcfc !important',
   toggleBackground: '#3b3b3b',
   startBackground: '#3b3b3b',
   mainColor: '#fcfcfc',
