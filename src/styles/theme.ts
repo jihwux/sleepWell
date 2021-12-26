@@ -3,7 +3,7 @@ export const lightTheme = {
   text: '#363537 !important',
   toggleBackground: '#fcfcfc',
   startBackground: '#e6328d',
-  mainColor: '#fcfcfc',
+  mainColor: '#fcfcfc !important',
   navBar: '#fcfcfc',
   mainBgOpacity: '0',
   sunMoon:
