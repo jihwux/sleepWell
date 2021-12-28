@@ -40,6 +40,10 @@ const BackgroundContianer = styled('div')<ThemeProps>`
   clip-path: polygon(100% 20%, 0% 100%, 100% 100%);
   background: linear-gradient(to right, #01c9ca 40%, #3886ff 100%);
 
+  @media only screen and (max-height: 768px) {
+    height: 380px;
+  }
+
   ::before {
     position: absolute;
     content: '';
