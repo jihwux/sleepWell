@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { ThemeContext } from '../../pages/_app';
 import { lightTheme, Theme } from '../../styles/theme';
-// import { useMediaQuery } from 'react-responsive';
 
 const Container = styled.div`
   width: 100%;
@@ -14,11 +13,12 @@ const Container = styled.div`
 const MainContent = styled.div`
   padding: 7rem 13rem;
   @media only screen and (max-width: 768px) {
-    padding: 3rem;
+    padding: 2.5rem;
   }
 
   p {
     padding: 0.5rem 0rem;
+    font-size: 16px;
   }
 
   h1 {
@@ -26,7 +26,7 @@ const MainContent = styled.div`
     padding-bottom: 3rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-bottom: 1rem;
   }
 `;
@@ -64,6 +64,12 @@ const SunMoon = styled('div')<ThemeProps>`
   height: 70px;
   border-radius: 50%;
   animation: ${({ theme }) => theme.sunAmimation};
+
+  @media only screen and (max-width: 768px) {
+    margin: 3rem 3rem;
+    width: 50px;
+    height: 50px;
+  }
 
   @keyframes sunrise {
     0% {

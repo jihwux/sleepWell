@@ -43,7 +43,6 @@ const SleepTimePicker = () => {
   const onClickTimeCalc = () => {
     setShow(true);
     setTimes([
-      // times.concat(),
       {
         id: 0,
         calc: '1단계 ' + Moment(value).add({ hours: 1, minutes: 44 }).format('hh:mm'),
@@ -85,7 +84,6 @@ const SleepTimePicker = () => {
       />
       <Button color="primary" variant="contained" onClick={onClickTimeCalc} className={classes.margin}>
         시작하기
-        {/* {count} */}
       </Button>
       <div>
         <p style={{ display: show ? 'block' : 'none' }} className={classes.pad}>

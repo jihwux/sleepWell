@@ -18,7 +18,6 @@ const GuidInfo = styled.div`
 `;
 
 const MomentContent = styled.div`
-  /* display: grid; */
   padding-top: 2rem;
   font-size: 1.3rem;
   line-height: 2rem;

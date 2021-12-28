@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Line } from 'react-chartjs-2';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import CycleChart from './CycleChart';
@@ -17,20 +16,18 @@ const chartData = {
       borderDash: [],
       borderCapStyle: 'butt',
       borderDashOffset: 0.0,
-      // borderWidth: 3,
       borderJoinStyle: 'miter',
       pointBorderColor: 'rgba(75,192,192,12)',
-      // pointBackgroundColor: '#fff',
-      // pointBorderWidth: 1,
-      // pointHoverRadius: 5,
-      // pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      // pointHoverBorderColor: 'rgba(220,220,220,1)',
-      // pointHoverBorderWidth: 2,
+      borderWidth: 3,
+      pointBackgroundColor: '#fff',
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+      pointHoverBorderColor: 'rgba(220,220,220,1)',
+      pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
       data: [20, 15, 12, 5, 15, 5, 12, 15, 20],
-      // rtl: true,
-      // yAxisID: 'y1',
     },
     {
       pointBorderColor: 'rgba(75,192,192,12)',
@@ -157,16 +154,8 @@ const SleepGuid = () => {
           <a href="https://github.com/"> (참고 자료)</a>
         </p>
       </GuidInfo>
-      {/* <h1>수면 주기</h1> */}
-
-      {/* <p>
-        * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에 +-5~30분 정도의 차이를 둬서 자신에게
-        맞는 수면 주기를 계산하여 찾는걸 추천 드립니다!
-      </p> */}
       {isPc && <CycleChart data={chartData} options={options} />}
       {isMobile && <CycleChart data={chartData} options={mOptions} />}
-      {/* {isPc && <Line data={type.data} options={options} style={{ width: '100%' }} />}
-      {isMobile && <Line data={props.data} options={mOptions} style={{ width: '100%' }} />} */}
     </div>
   );
 };

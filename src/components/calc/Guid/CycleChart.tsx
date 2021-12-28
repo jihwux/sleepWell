@@ -8,13 +8,6 @@ type Props = {
 };
 
 const CycleChart = (props: Props) => {
-  // const isPc = useMediaQuery({
-  //   query: '(min-width: 1028px)',
-  // });
-
-  // const isMobile = useMediaQuery({
-  //   query: '(max-width: 1028px)',
-  // });
   return (
     <div>
       <Line data={props.data} options={props.options} style={{ width: '100%' }} />

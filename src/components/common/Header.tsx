@@ -74,29 +74,15 @@ interface ThemeProps {
 }
 
 const Android = styled('button')<ThemeProps>`
-  /* width: 100%; */
-  /* height: 40px; */
   border-radius: 30px;
   font-size: 14px;
   color: ${({ theme }) => theme.text};
-  /* &:hover {
-    background: #fcfcfc;
-    color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
-    transition: all 0.1s ease-in-out;
-  } */
 `;
 
 const Appstore = styled('button')<ThemeProps>`
-  /* width: 100%; */
-  /* height: 40px; */
   border-radius: 30px;
   font-size: 14px;
   color: ${({ theme }) => theme.text};
-  /* &:hover {
-    background: #fcfcfc;
-    color: ${({ theme }) => (theme === lightTheme ? theme.mainColor : theme.body)};
-    transition: all 0.1s ease-in-out;
-  } */
 `;
 
 export default function Navigation() {

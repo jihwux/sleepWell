@@ -75,4 +75,9 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
     .css-1h08vn0-MuiButtonBase-root-MuiTab-root.Mui-selected {
         color: #f50057 !important;
     }
+    .css-1f3wfo0-MuiButtonBase-root-MuiTab-root.Mui-selected {
+        color: #f50057 !important;
+    }
+
+
 `;

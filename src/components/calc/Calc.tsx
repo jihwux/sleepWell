@@ -8,7 +8,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import SleepCurrentCalc from '../calc/Current/SleepCurrentCalc';
 import SleepTimePicker from '../calc/Plan/SleepTimePicker';
-import SleepInfo from './News/SleepInfo';
+import SleepInfo from './Tip/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
@@ -75,8 +75,6 @@ export default function VerticalTabs() {
     setValue(index);
   };
 
-  // const styles = { color: "blue", fontWeight: "bold", marginTop: "0.5rem" };
-
   return (
     // <Container maxWidth="xl">
     <Container style={{ padding: '2rem', maxWidth: 'none' }} maxWidth="xl">
@@ -94,7 +92,6 @@ export default function VerticalTabs() {
             value={value}
             onChange={handleChange}
             indicatorColor="secondary"
-            // textColor="secondary"
           >
             <Tab label="가이드" {...a11yProps(0)} />
             <Tab label="지금 자면?" {...a11yProps(1)} />
@@ -141,7 +138,6 @@ export default function VerticalTabs() {
               value={value}
               onChange={handleChange}
               indicatorColor="secondary"
-              // textColor="secondary"
               variant="scrollable"
               scrollButtons
               allowScrollButtonsMobile
