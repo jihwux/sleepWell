@@ -12,7 +12,6 @@ const GuidInfo = styled.div`
   line-height: 1.8rem;
   padding-left: 3rem;
   height: 700px;
-
   overflow-x: hidden;
 
   @media only screen and (max-width: 768px) {
@@ -25,7 +24,6 @@ const GuidInfo = styled.div`
   ::-webkit-scrollbar-thumb {
     background-color: #f50057;
     border-radius: 50px;
-
     width: 0px;
   }
 
