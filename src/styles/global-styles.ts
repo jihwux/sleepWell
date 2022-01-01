@@ -11,6 +11,8 @@ interface ThemeInterface {
     navBar: string;
     startBackground: string;
     mainBgOpacity: string;
+    pickerToolBarText: string;
+    pickClockText: string;
   };
 }
 
@@ -70,7 +72,7 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         }
     }
     .css-4jkopv-MuiIconButton-label {
-        color: black;
+        color: ${({ theme }) => theme.text};
     }
     .css-1h08vn0-MuiButtonBase-root-MuiTab-root.Mui-selected {
         color: #f50057 !important;
@@ -78,6 +80,27 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
     .css-1f3wfo0-MuiButtonBase-root-MuiTab-root.Mui-selected {
         color: #f50057 !important;
     }
+    .MuiPickersStaticWrapper-root {
+        background: ${({ theme }) => theme.body} !important;
+        transition: all 0.5s ease-in-out;
+    }
+    .MuiClockNumber-root {
+        color: ${({ theme }) => theme.pickClockText};
 
+    }
+    .MuiClockNumber-root.Mui-selected {
+        color: #fff !important;
 
+    }
+    .MuiPickersToolbarText-root.Mui-selected {
+        color: ${({ theme }) => theme.text};
+    }
+    .MuiPickersToolbarText-root {
+        color: ${({ theme }) => theme.pickerToolBarText};
+        
+    }
+    .css-1hbyad5-MuiTypography-root {
+        color: #7c7c7c;
+
+    }
 `;

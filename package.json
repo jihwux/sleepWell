@@ -9,6 +9,7 @@
     "@material-ui/lab": "^v5.0.0-alpha.30",
     "@material-ui/styles": "^4.11.3",
     "@netlify/plugin-nextjs": "^4.1.0",
+    "@next/bundle-analyzer": "^12.0.7",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -26,6 +27,7 @@
     "babel-plugin-inline-react-svg": "^2.0.1",
     "babel-plugin-styled-components": "^1.12.0",
     "chart.js": "^3.5.1",
+    "cross-env": "^7.0.3",
     "firebase-tools": "^10.0.0",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^12.0.8-canary.13",
@@ -50,7 +52,8 @@
     "export": "next export",
     "netlify-deploy": "next build && next export",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "eslintConfig": {
     "extends": [

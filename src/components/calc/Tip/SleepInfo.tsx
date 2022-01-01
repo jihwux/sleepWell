@@ -36,6 +36,7 @@ const InfoContent = styled.div`
     font-size: 1rem;
     font-weight: 600;
     padding: 1rem 0;
+    color: #ffa5c5;
   }
 
   dd {

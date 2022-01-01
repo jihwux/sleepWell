@@ -9,6 +9,7 @@ export const lightTheme = {
   sunMoon:
     '0 0 0 20px #ffde0080, 0 0 0 40px #ffde0040, 0 0 0 20px #ffde0020, 0 0 0 40px #ffde0010,  0 0 0 100px #ffde0000, 0 0 0px 0px #ffde0010',
   sunMoonBackground: '#ffde00',
+  pickerToolBarText: '#7c7c7c',
 };
 
 export const darkTheme = {
@@ -21,6 +22,8 @@ export const darkTheme = {
   mainBgOpacity: '1',
   sunMoon: '15px 15px 0 0 #ffde00',
   sunMoonBackground: 'none',
+  pickerToolBarText: '#727272 !important',
+  pickClockText: '#727272 !important',
 };
 
 export type Theme = typeof lightTheme;
