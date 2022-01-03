@@ -1,4 +1,6 @@
 import React from 'react';
+import { NextPage } from 'next';
+
 import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -55,7 +57,7 @@ function a11yProps(index: number) {
   };
 }
 
-export default function VerticalTabs() {
+const VerticalTabs: NextPage = () => {
   const [value, setValue] = React.useState(0);
   const theme = useTheme();
   const classes = useStyles();
@@ -74,10 +76,8 @@ export default function VerticalTabs() {
   const handleChangeIndex = (index: number) => {
     setValue(index);
   };
-
   return (
-    // <Container maxWidth="xl">
-    <Container style={{ padding: '2rem', maxWidth: 'none' }} maxWidth="xl">
+    <Container style={{ padding: '3rem', maxWidth: 'none' }} maxWidth="xl" className="MuiContainer">
       {isPc && (
         <Box
           sx={{
@@ -124,16 +124,11 @@ export default function VerticalTabs() {
             광고
           </Box>
         </Box>
-        // </Container>
       )}
 
       {isMobile && (
-        <Container>
-          <Box
-            sx={{
-              padding: '0.5rem 0',
-            }}
-          >
+        <Container style={{}}>
+          <Box>
             <Tabs
               value={value}
               onChange={handleChange}
@@ -183,4 +178,6 @@ export default function VerticalTabs() {
       )}
     </Container>
   );
-}
+};
+
+export default VerticalTabs;

@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import React, { createContext } from 'react';
 import Header from '../components/common/Header';
 import { GlobalStyle } from '../styles/global-styles';
+import { MuiCustomStyle } from '../styles/muiCustom';
 import { lightTheme, darkTheme, Theme } from '../styles/theme';
 
 import { useDarkMode } from '../hooks/useDarkMode';
@@ -25,6 +26,8 @@ const app = ({ Component, pageProps }: AppProps) => {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <>
         <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+        <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+
         <Header />
         <Component {...pageProps} />
       </>

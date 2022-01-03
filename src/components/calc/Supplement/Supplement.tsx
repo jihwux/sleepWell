@@ -108,7 +108,6 @@ const Supplement = () => {
                       height={100}
                       priority={true}
                       placeholder="blur"
-                      blurDataURL="{Magnesium}"
                       alt="image with blur support"
                     />
                   </a>
@@ -129,15 +128,7 @@ const Supplement = () => {
               <IherbProduct>
                 <ProductImage>
                   <a href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418">
-                    <Image
-                      src={Tryptophan}
-                      width={100}
-                      height={100}
-                      priority={true}
-                      placeholder="blur"
-                      blurDataURL="{Tryptophan}"
-                      alt="image with blur support"
-                    />
+                    <Image src={Tryptophan} width={100} height={100} placeholder="blur" alt="image with blur support" />
                   </a>
                 </ProductImage>
 
