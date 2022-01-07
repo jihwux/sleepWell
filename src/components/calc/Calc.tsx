@@ -1,6 +1,4 @@
 import React from 'react';
-import { NextPage } from 'next';
-
 import Container from '@material-ui/core/Container';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -57,7 +55,7 @@ function a11yProps(index: number) {
   };
 }
 
-const VerticalTabs: NextPage = () => {
+const Calc = () => {
   const [value, setValue] = React.useState(0);
   const theme = useTheme();
   const classes = useStyles();
@@ -180,4 +178,4 @@ const VerticalTabs: NextPage = () => {
   );
 };
 
-export default VerticalTabs;
+export default Calc;

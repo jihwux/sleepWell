@@ -2,11 +2,14 @@ const withImages = require('next-images');
 module.exports = withImages({
   images: {
     disableStaticImages: true,
+    domains: ['sleepfit.site'],
+    loader: 'akamai',
+    path: '/',
   },
   oaders: [
     {
       test: /\.(gif|svg|jpg|png)$/,
-      loader: 'file-loader',
+      loader: 'imgix',
     },
   ],
 });
@@ -17,23 +20,16 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   // put the rest of config here
+  compress: true,
+  webpack(config, { webpack }) {
+    const prod = process.env.NODE_ENV === 'production';
+    const plugins = [...config.plugins];
+
+    return {
+      ...config,
+      mode: prod ? 'production' : 'development',
+      devtool: prod ? 'hidden-source-map' : 'eval',
+      plugins,
+    };
+  },
 });
-// module.exports = {
-
-// };
-
-//  `next.config.js` 작성하기
-// module.exports = {
-//   webpack(config) {
-//     config.module.rules.push({
-//       // 웹팩설정에 로더 추가함
-//       test: /\.svg$/,
-//       issuer: {
-//         test: /\.(js|ts)x?$/,
-//       },
-//       use: ['@svgr/webpack'],
-//     });
-
-//     return config;
-//   },
-// };

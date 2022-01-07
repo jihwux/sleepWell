@@ -83,7 +83,7 @@ const SleepTimePicker = () => {
         renderInput={(params) => <TextField {...params} variant="standard" />}
       />
       <Button color="primary" variant="contained" onClick={onClickTimeCalc} className={classes.margin}>
-        시작하기
+        계산하기
       </Button>
       <div>
         <p style={{ display: show ? 'block' : 'none' }} className={classes.pad}>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import AndroidLogo from '../../public/playStore.svg';
+
+import PlayStoreLogo from '../../public/playStore.png';
 import AppstoreLogo from '../../public/appStore.png';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -73,7 +74,7 @@ interface ThemeProps {
   theme: Theme;
 }
 
-const Android = styled('button')<ThemeProps>`
+const PlayStore = styled('button')<ThemeProps>`
   border-radius: 30px;
   font-size: 14px;
   color: ${({ theme }) => theme.text};
@@ -84,6 +85,10 @@ const Appstore = styled('button')<ThemeProps>`
   font-size: 14px;
   color: ${({ theme }) => theme.text};
 `;
+
+function Expected() {
+  alert('2월 중 출시 예정입니다!');
+}
 
 export default function Navigation() {
   const { theme } = useContext(ThemeContext);
@@ -101,11 +106,27 @@ export default function Navigation() {
         <DarkModeToggle />
         {isPc && (
           <InfoContainer>
-            <Android theme={theme}>
-              <AndroidLogo />
-            </Android>
+            <PlayStore theme={theme}>
+              <Image
+                onClick={Expected}
+                src={PlayStoreLogo}
+                alt="Appstore"
+                width={54}
+                height={54}
+                placeholder="blur"
+                // blurDataURL={PlayStoreLogo}
+              />
+            </PlayStore>
             <Appstore>
-              <Image src={AppstoreLogo} alt="Appstore" width={44} height={44} />
+              <Image
+                onClick={Expected}
+                src={AppstoreLogo}
+                alt="Appstore"
+                width={44}
+                height={44}
+                placeholder="blur"
+                // blurDataURL={PlayStoreLogo}
+              />
             </Appstore>
           </InfoContainer>
         )}

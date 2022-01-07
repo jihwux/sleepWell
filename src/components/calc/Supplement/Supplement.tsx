@@ -65,7 +65,14 @@ const IherbProduct = styled.div`
 const ProductContainer = styled.div``;
 
 const ProductTitle = styled.div`
-  width: 85%;
+  width: 80%;
+  @media only screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+  a {
+    display: inline-block;
+    font-weight: bold;
+  }
 `;
 
 const ProductImage = styled.div`
@@ -76,11 +83,7 @@ const ProductImage = styled.div`
   }
 `;
 
-const MedicineProduct = styled.div`
-  img {
-    padding: 1rem;
-  }
-`;
+const MedicineProduct = styled.div``;
 
 const Supplement = () => {
   const isMobile = useMediaQuery({
@@ -102,19 +105,14 @@ const Supplement = () => {
               <IherbProduct>
                 <ProductImage>
                   <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567">
-                    <Image
-                      src={Magnesium}
-                      width={100}
-                      height={100}
-                      priority={true}
-                      placeholder="blur"
-                      alt="image with blur support"
-                    />
+                    <Image src={Magnesium} width={100} height={100} placeholder="blur" alt="image with blur support" />
                   </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  Doctor Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정
+                  <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567">
+                    Doctor Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정
+                  </a>
                   <br />
                   {isMobile && (
                     <p>
@@ -133,7 +131,9 @@ const Supplement = () => {
                 </ProductImage>
 
                 <ProductTitle>
-                  Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
+                  <a href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418">
+                    Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
+                  </a>
                   <br />
                   {isMobile && (
                     <p>
@@ -152,16 +152,17 @@ const Supplement = () => {
                       src={Theanine}
                       width={100}
                       height={100}
-                      priority={true}
                       placeholder="blur"
-                      blurDataURL="{Theanine}"
+                      // layout="fill"
                       alt="image with blur support"
                     />
                   </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  Gold Nutrition, L-테아닌, 알파웨이브, 긴장 완화 효과, 진정 및 집중 효과, 100mg, 베지 캡슐 60정
+                  <a href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283">
+                    Gold Nutrition, L-테아닌, 알파웨이브, 긴장 완화 효과, 진정 및 집중 효과, 100mg, 베지 캡슐 60정
+                  </a>
                   <br />
                   {isMobile && (
                     <p>
@@ -180,15 +181,7 @@ const Supplement = () => {
             복용하는게 권장 됩니다. 전문의약품인 수면제로는 라제팜, 졸피뎀 등 수면제가 있으며 가까운 병원에 내원하여서
             상담 후 처방을 받을 수 있습니다.
             <MedicineProduct>
-              <Image
-                src={DrugCool}
-                width={700}
-                height={320}
-                priority={true}
-                placeholder="blur"
-                blurDataURL="{DrugCool}"
-                alt="image with blur support"
-              />
+              <Image src={DrugCool} width={700} height={320} placeholder="blur" alt="image with blur support" />
             </MedicineProduct>
           </dd>
         </dl>
