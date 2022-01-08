@@ -12,6 +12,7 @@ import SleepInfo from './Tip/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
+import GoogleAd from '../common/GoogleAd';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -115,11 +116,11 @@ const Calc = () => {
           <Box
             sx={{
               width: '30%',
-              height: 224,
-              background: 'gray',
+              // height: 224,
+              // background: 'gray',
             }}
           >
-            광고
+            <GoogleAd />
           </Box>
         </Box>
       )}
@@ -168,9 +169,7 @@ const Calc = () => {
                 height: 224,
                 background: 'gray',
               }}
-            >
-              광고
-            </Box>
+            ></Box>
           </Box>
         </Container>
       )}
