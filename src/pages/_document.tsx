@@ -30,6 +30,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="google-site-verification" content="j8oqjfHaWtzRdXV1dGHj-j47ttB4wYUwRnIGDirPLrw" />
           <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet" />
           <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean"
