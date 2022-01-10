@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-
 import PlayStoreLogo from '../../public/playStore.png';
 import AppstoreLogo from '../../public/appStore.png';
 import Link from 'next/link';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
 import { ThemeContext } from '../../pages/_app';
-import { lightTheme, Theme } from '../../styles/theme';
+import { Theme } from '../../styles/theme';
 import { useMediaQuery } from 'react-responsive';
 
 interface NavProps {
@@ -17,7 +16,6 @@ const NavContainer = styled('nav')<NavProps>`
   width: 100%;
   height: 63px;
   display: flex;
-  /* padding: 3rem; */
   padding: 3rem 13rem;
 
   @media only screen and (max-width: 768px) {
@@ -34,7 +32,6 @@ const NavContainer = styled('nav')<NavProps>`
 const NavContentContainer = styled.div`
   width: 100%;
   height: 100%;
-  /* margin-left: rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +60,6 @@ const TitleContainer = styled('header')<ColorProps>`
 
 const InfoContainer = styled.div`
   width: 250px;
-  /* height: 100%; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -107,26 +103,10 @@ export default function Navigation() {
         {isPc && (
           <InfoContainer>
             <PlayStore theme={theme}>
-              <Image
-                onClick={Expected}
-                src={PlayStoreLogo}
-                alt="Appstore"
-                width={54}
-                height={54}
-                placeholder="blur"
-                // blurDataURL={PlayStoreLogo}
-              />
+              <Image onClick={Expected} src={PlayStoreLogo} alt="Appstore" width={54} height={54} placeholder="blur" />
             </PlayStore>
             <Appstore>
-              <Image
-                onClick={Expected}
-                src={AppstoreLogo}
-                alt="Appstore"
-                width={44}
-                height={44}
-                placeholder="blur"
-                // blurDataURL={PlayStoreLogo}
-              />
+              <Image onClick={Expected} src={AppstoreLogo} alt="Appstore" width={44} height={44} placeholder="blur" />
             </Appstore>
           </InfoContainer>
         )}

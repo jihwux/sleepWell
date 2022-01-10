@@ -125,9 +125,9 @@ const Main: NextPage = () => {
     <Container>
       <MainContent>
         <h2>조금 더 편한 아침을 위한</h2>
-        <h1>수면계산기</h1>
-        <p>아침에 일어날때 항상 피곤하셨나요?</p>
-        <p>편하게 일어날 수 있는 시간을 계산해보세요!</p>
+        <h1>수면 계산기</h1>
+        <p>아침에 일어날 때 항상 피곤하셨나요?</p>
+        <p>편하게 일어날 수 있는 시간을 계산해 보세요!</p>
         <StartButton theme={theme}>
           <Link href="../calc/">
             <a>Start</a>
