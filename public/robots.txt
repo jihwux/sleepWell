@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sleepfit.site
+
+# Sitemaps
+Sitemap: https://sleepfit.site/sitemap.xml
