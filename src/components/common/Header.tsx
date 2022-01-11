@@ -103,7 +103,7 @@ export default function Navigation() {
         {isPc && (
           <InfoContainer>
             <PlayStore theme={theme}>
-              <Image onClick={Expected} src={PlayStoreLogo} alt="Appstore" width={54} height={54} placeholder="blur" />
+              <Image onClick={Expected} src={PlayStoreLogo} alt="PlayStore" width={54} height={54} placeholder="blur" />
             </PlayStore>
             <Appstore>
               <Image onClick={Expected} src={AppstoreLogo} alt="Appstore" width={44} height={44} placeholder="blur" />

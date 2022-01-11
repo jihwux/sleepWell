@@ -52,7 +52,7 @@ export default function DarkModeToggle(): ReactElement {
         <>
           <Emoji>
             <span role="img" aria-label="darkMoon">
-              🌚
+              🌑
             </span>
           </Emoji>
           <ModeContent>Dark</ModeContent>
@@ -61,7 +61,7 @@ export default function DarkModeToggle(): ReactElement {
         <>
           <Emoji>
             <span role="img" aria-label="lightSun">
-              🌞
+              ☀️
             </span>
           </Emoji>
           <ModeContent>Light</ModeContent>

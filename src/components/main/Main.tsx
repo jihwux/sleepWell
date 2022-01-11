@@ -13,7 +13,7 @@ const Container = styled.div`
 const MainContent = styled.div`
   padding: 7rem 13rem;
   @media only screen and (max-width: 768px) {
-    padding: 2.5rem;
+    padding: 2.5rem 1rem 2.5rem 2.5rem;
   }
 
   p {
@@ -71,8 +71,7 @@ const SunMoon = styled('div')<ThemeProps>`
 
   @media only screen and (max-width: 768px) {
     margin: 3rem 3rem;
-    width: 50px;
-    height: 50px;
+    width: 90px;
   }
 
   @keyframes sunrise {
