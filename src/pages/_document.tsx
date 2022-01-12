@@ -30,6 +30,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="naver-site-verification" content="25fd5a14fddc8f6f9013c5a78efe50f4339053ec" />
           <meta name="google-site-verification" content="j8oqjfHaWtzRdXV1dGHj-j47ttB4wYUwRnIGDirPLrw" />
           <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet" />
           <link
