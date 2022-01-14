@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import Head from 'next/Head';
 import React, { createContext } from 'react';
 import Header from '../components/common/Header';
 import { GlobalStyle } from '../styles/global-styles';
@@ -25,6 +26,9 @@ const app = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <>
+        {/* <Head>
+          <link rel="shortcut icon" href="../public/favicon.ico" />
+        </Head> */}
         <NextSeo
           title="꿀잠"
           titleTemplate="꿀잠"
