@@ -3,7 +3,11 @@ import { NextPage } from 'next';
 import Main from '../components/main/Main';
 
 const index: NextPage = () => {
-  return <Main />;
+  return (
+    <>
+      <Main />
+    </>
+  );
 };
 
 export default index;

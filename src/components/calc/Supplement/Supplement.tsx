@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import DrugCool from '../../../public/drug.png';
-import Magnesium from '../../../public/magnesium.png';
-import Theanine from '../../../public/theanine.png';
-import Tryptophan from '../../../public/tryptophan.png';
+import DrugCool from '/public/images/drug.png';
+import Magnesium from '/public/images/magnesium.png';
+import Theanine from '/public/images/theanine.png';
+import Tryptophan from '/public/images/tryptophan.png';
 import { useMediaQuery } from 'react-responsive';
 
 const GuidInfo = styled.div`

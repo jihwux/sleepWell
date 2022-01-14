@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import PlayStoreLogo from '../../public/playStore.png';
-import AppstoreLogo from '../../public/appStore.png';
-import BrandLogo from '../../public/brandLogo.png';
+import PlayStoreLogo from '/public/images/playStore.png';
+import AppstoreLogo from '/public/images/appStore.png';
+import BrandLogo from '/public/images/brandLogo.png';
 import Link from 'next/link';
 import styled from 'styled-components';
 import DarkModeToggle from './DarkModeToggle';
@@ -98,7 +98,7 @@ export default function Navigation() {
         <TitleContainer color={theme.mainColor}>
           <Link href="/">
             <a>
-              <span style={{ fontFamily: 'MapoBackpacking', paddingRight: '5px' }}>꿀잠</span>
+              <span style={{ fontFamily: 'Jua', paddingRight: '5px', fontWeight: 400 }}>꿀잠</span>
               <Image src={BrandLogo} alt="PlayStore" width={40} height={40} placeholder="blur" />
             </a>
           </Link>
