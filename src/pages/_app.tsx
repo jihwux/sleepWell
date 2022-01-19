@@ -27,22 +27,28 @@ const app = ({ Component, pageProps }: AppProps) => {
       <>
         <NextSeo
           title="꿀잠"
-          titleTemplate="꿀잠"
-          defaultTitle="꿀잠"
           description="바쁜 당신을 위한 수면 계산기"
           canonical="https://www.sleepfit.site/"
           openGraph={{
+            type: 'website',
             url: 'https://www.sleepfit.site/',
             title: '꿀잠',
-            description: '바쁜 당신을 위한 수면 계산기. ',
+            description: '바쁜 당신을 위한 수면 계산기',
             images: [
               {
-                url: '../public/appStore.png',
-                width: 800,
-                height: 420,
-                alt: '꿀잠',
+                url: '/public/images/brandLogo',
+                width: 1200,
+                height: 630,
+                alt: '램수면 걔산기',
+                type: 'image/png',
               },
             ],
+            site_name: '꿀잠',
+          }}
+          twitter={{
+            handle: '@handle',
+            site: '@site',
+            cardType: 'summary_large_image',
           }}
         />
         <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
