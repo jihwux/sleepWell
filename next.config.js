@@ -1,18 +1,29 @@
 const withImages = require('next-images');
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
+
 module.exports = withImages({
   images: {
     disableStaticImages: true,
-    domains: ['sleepfit.site'],
-    loader: 'akamai',
-    path: '/',
+    // path: '/images/',
   },
-  oaders: [
+  // oaders: [
+  //   {
+  //     test: /\.(gif|svg|jpg|png)$/,
+  //     loader: 'imgix',
+  //   },
+  // ],
+});
+module.exports = withPlugins([
+  [
+    optimizedImages,
     {
-      test: /\.(gif|svg|jpg|png)$/,
-      loader: 'imgix',
+      /* config for next-optimized-images */
     },
   ],
-});
+
+  // your other plugins here
+]);
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
