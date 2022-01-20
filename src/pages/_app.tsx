@@ -36,7 +36,7 @@ const app = ({ Component, pageProps }: AppProps) => {
             description: '바쁜 당신을 위한 수면 계산기',
             images: [
               {
-                url: '/images/brandLogo.png',
+                url: '/images/brandThum.png',
                 width: 1200,
                 height: 630,
                 alt: '램수면 걔산기',
