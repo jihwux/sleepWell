@@ -37,8 +37,8 @@ const app = ({ Component, pageProps }: AppProps) => {
             images: [
               {
                 url: '/images/brandThum.png',
-                width: 1200,
-                height: 630,
+                width: 600,
+                height: 300,
                 alt: '램수면 걔산기',
                 type: 'image/png',
               },
