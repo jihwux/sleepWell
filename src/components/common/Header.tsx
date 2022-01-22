@@ -104,7 +104,7 @@ export default function Navigation() {
           </Link>
         </TitleContainer>
         <DarkModeToggle />
-        {isPc && (
+        {/* {isPc && (
           <InfoContainer>
             <PlayStore theme={theme}>
               <Image onClick={Expected} src={PlayStoreLogo} alt="PlayStore" width={54} height={54} placeholder="blur" />
@@ -113,7 +113,7 @@ export default function Navigation() {
               <Image onClick={Expected} src={AppstoreLogo} alt="Appstore" width={44} height={44} placeholder="blur" />
             </Appstore>
           </InfoContainer>
-        )}
+        )} */}
       </NavContentContainer>
     </NavContainer>
   );

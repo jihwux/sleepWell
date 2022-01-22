@@ -120,7 +120,7 @@ const Calc = () => {
               // background: 'gray',
             }}
           >
-            <GoogleAd />
+            {/* <GoogleAd /> */}
           </Box>
         </Box>
       )}
@@ -164,12 +164,12 @@ const Calc = () => {
                 <Supplement />
               </TabPanel>
             </SwipeableViews>
-            <Box
+            {/* <Box
               sx={{
                 height: 224,
                 background: 'gray',
               }}
-            ></Box>
+            ></Box> */}
           </Box>
         </Container>
       )}

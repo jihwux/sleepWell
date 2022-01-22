@@ -43,6 +43,7 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
     .MuiPickersStaticWrapper-root {
         background: ${({ theme }) => theme.body} !important;
         transition: all 0.5s ease-in-out;
+        flex-direction: inital !important;
     }
     .MuiClockNumber-root {
         color: ${({ theme }) => theme.pickClockText};
@@ -73,7 +74,7 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
       padding: 0 !important;
     }
     .css-1qd6l8g{
-      padding: 1rem 0rem !important;
+      padding: 1rem 2rem !important;
     }
     
     .css-1ddk3v3-MuiGrid-root {
