@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Image from 'next/image';
-import PlayStoreLogo from '/public/images/playStore.png';
-import AppstoreLogo from '/public/images/appStore.png';
+// import PlayStoreLogo from '/public/images/playStore.png';
+// import AppstoreLogo from '/public/images/appStore.png';
 import BrandLogo from '/public/images/brandLogo.png';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -89,9 +89,9 @@ function Expected() {
 
 export default function Navigation() {
   const { theme } = useContext(ThemeContext);
-  const isPc = useMediaQuery({
-    query: '(min-width: 1028px)',
-  });
+  // const isPc = useMediaQuery({
+  //   query: '(min-width: 1028px)',
+  // });
   return (
     <NavContainer navBar={theme.navBar}>
       <NavContentContainer>
@@ -105,6 +105,7 @@ export default function Navigation() {
         </TitleContainer>
         <DarkModeToggle />
         {/* {isPc && (
+          // 앱 출시 후.
           <InfoContainer>
             <PlayStore theme={theme}>
               <Image onClick={Expected} src={PlayStoreLogo} alt="PlayStore" width={54} height={54} placeholder="blur" />
