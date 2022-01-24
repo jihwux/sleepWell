@@ -38,7 +38,7 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-          <meta name="naver-site-verification" content="25fd5a14fddc8f6f9013c5a78efe50f4339053ec" />
+          <meta name="naver-site-verification" content="f9452db307d2fe8e78df07952649bb7ec8442416" />
           <meta name="google-site-verification" content="j8oqjfHaWtzRdXV1dGHj-j47ttB4wYUwRnIGDirPLrw" />
 
           <link
