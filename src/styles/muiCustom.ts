@@ -63,26 +63,52 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
     .css-1hbyad5-MuiTypography-root {
         color: #7c7c7c !important;
     }
+
+    .MuiTypography-root {
+    }
     
     .css-gepadz-MuiTypography-root {
         font-size: 2.5rem !important;
     }
+    
     .MuiTimePickerToolbar-ampmLabel {
         
     }
     .MuiPickersToolbar-toolbarLandscape {
+        
       padding: 0 !important;
     }
     .css-1qd6l8g{
+      @media only screen and (max-width: 768px) {
+        padding: 0rem !important;
+    }
+
       padding: 1rem 2rem !important;
     }
     
     .css-1ddk3v3-MuiGrid-root {
-      width: 90%;
+      width: 75% !important;
+
+      @media only screen and (max-width: 768px) {
+        width: 70% !important;
     }
+    }
+    
     .MuiContainer {
       @media only screen and (max-width: 768px) {
         padding: 1.5rem 0.5rem !important;
+      }
+      
+      .MuiPickerView-root{
+        @media only screen and (max-width: 768px) {
+            width: 230px;
+        }
+      }
+      
+      .MuiTabs-root {
+        @media only screen and (max-width: 768px) {
+            padding-bottom:1.5rem;
+        }
       }
     }
 `;

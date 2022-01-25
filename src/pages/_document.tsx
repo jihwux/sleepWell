@@ -30,6 +30,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta name="naver-site-verification" content="f9452db307d2fe8e78df07952649bb7ec8442416" />
+          <meta name="google-site-verification" content="xE71eHQcrVsYzKTZnn_sv4wh_Q7Yay6_8dfiaG_ao5g" />
           <link rel="icon" href=".//favicon.ico" />
           <link rel="apple-touch-icon" sizes="180x180" href=".//apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href=".//favicon-32x32.png" />
@@ -38,9 +40,6 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-          <meta name="naver-site-verification" content="f9452db307d2fe8e78df07952649bb7ec8442416" />
-          <meta name="google-site-verification" content="j8oqjfHaWtzRdXV1dGHj-j47ttB4wYUwRnIGDirPLrw" />
-
           <link
             href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean"
             rel="stylesheet"

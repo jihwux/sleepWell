@@ -1,11 +1,16 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const ViewContainer = styled.div`
+export interface typeProps {
+  color?: string;
+  scrollHeight?: boolean;
+}
+
+const ViewContainer = styled.div<typeProps>`
   font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
-  /* height: 700px; */
+  height: ${(props) => (props.scrollHeight ? '700px' : 'auto')};
   overflow-x: hidden;
   ::-webkit-scrollbar {
     width: 2px;
@@ -33,9 +38,8 @@ const ViewContainer = styled.div`
     padding-top: 1rem;
   }
 `;
-
-const GuidInfo = (props: any) => {
-  return <ViewContainer>{props.children}</ViewContainer>;
+const GuidInfo: React.FC<typeProps> = ({ children, ...props }) => {
+  return <ViewContainer {...props}>{children}</ViewContainer>;
 };
 
 export default GuidInfo;

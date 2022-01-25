@@ -6,34 +6,11 @@ import Magnesium from '/public/images/magnesium.png';
 import Theanine from '/public/images/theanine.png';
 import Tryptophan from '/public/images/tryptophan.png';
 import { useMediaQuery } from 'react-responsive';
+import ViewContainer from '../../common/Guidinfo';
 
-const GuidInfo = styled.div`
-  font-size: 16px;
-  line-height: 1.8rem;
-  padding-left: 3rem;
-  height: 700px;
-  overflow-x: hidden;
+const ProductContainer = styled.div``;
 
-  @media only screen and (max-width: 768px) {
-    overflow: hidden;
-    height: auto;
-  }
-  ::-webkit-scrollbar {
-    width: 2px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #f50057;
-    border-radius: 50px;
-    width: 0px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    padding-left: 0;
-    p {
-      padding: 0.5rem 0;
-    }
-  }
-`;
+const MedicineProduct = styled.div``;
 
 const InfoContent = styled.div`
   padding-top: 3rem;
@@ -62,8 +39,6 @@ const IherbProduct = styled.div`
   }
 `;
 
-const ProductContainer = styled.div``;
-
 const ProductTitle = styled.div`
   width: 80%;
   @media only screen and (max-width: 768px) {
@@ -83,15 +58,13 @@ const ProductImage = styled.div`
   }
 `;
 
-const MedicineProduct = styled.div``;
-
 const Supplement = () => {
   const isMobile = useMediaQuery({
     query: '(min-width: 1028px)',
   });
 
   return (
-    <GuidInfo>
+    <ViewContainer scrollHeight>
       <p>
         불면증이 심하거나 시차 적응 혹은 낮과 밤이 바뀌어 정상적인 생활이 안될 경우에 삶의 질이 떨어집니다. 약물에
         도움을 받는다면 가까운 내과에 방문하여 처방을 받을 수 있는 수면제가 있으며, 단기적인 보조치료로 약국에서 쉽게
@@ -178,7 +151,7 @@ const Supplement = () => {
           </dd>
         </dl>
       </InfoContent>
-    </GuidInfo>
+    </ViewContainer>
   );
 };
 
