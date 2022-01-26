@@ -113,15 +113,13 @@ const Calc = () => {
           <TabPanel value={value} index={4} className={classes.tabs}>
             <Supplement />
           </TabPanel>
-          <Box
+          {/* <Box
             sx={{
               width: '30%',
-              // height: 224,
-              // background: 'gray',
             }}
           >
-            {/* <GoogleAd /> */}
-          </Box>
+            <GoogleAd />
+          </Box> */}
         </Box>
       )}
 

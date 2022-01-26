@@ -6,7 +6,7 @@ import StaticTimePicker from '@material-ui/lab/StaticTimePicker';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Moment from 'moment';
-import styled from 'styled-components';
+import ViewContainer from '../../common/Guidinfo';
 
 interface ITime {
   id?: number;
@@ -37,10 +37,6 @@ const SleepTimePicker = () => {
     setValue(value); // value 사용자가 선택한 시간.
     console.log(value);
   };
-
-  const PickerContainer = styled.div`
-    padding-left: 3rem;
-  `;
 
   const onClickTimeCalc = () => {
     setShow(true);
@@ -73,8 +69,8 @@ const SleepTimePicker = () => {
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <PickerContainer>
+    <ViewContainer>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
         <StaticTimePicker
           ampm
           orientation="landscape"
@@ -99,8 +95,8 @@ const SleepTimePicker = () => {
             ))}
           </ul>
         </div>
-      </PickerContainer>
-    </LocalizationProvider>
+      </LocalizationProvider>
+    </ViewContainer>
   );
 };
 

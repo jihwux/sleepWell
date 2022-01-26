@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import CycleChart from './CycleChart';
+import ViewContainer from '../../common/Guidinfo';
+import { makeStyles } from '@material-ui/core/styles';
 
 const chartData = {
   labels: ['자정', '1', '2', '3', '4', '5', '6', '7', '8'],
@@ -27,7 +28,7 @@ const chartData = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [20, 15, 12, 5, 15, 5, 12, 15, 20],
+      data: [20, 10, 15, 5, 15, 5, 15, 10, 20],
     },
     {
       pointBorderColor: 'rgba(75,192,192,12)',
@@ -109,31 +110,22 @@ const mOptions = {
     },
   },
 };
-const GuidInfo = styled.div`
-  font-size: 16px;
-  line-height: 1.8rem;
-  padding-left: 3rem;
-  @media only screen and (max-width: 768px) {
-    padding-left: 0;
 
-    p {
-      padding: 0.5rem 0;
-    }
-  }
-  p:last-child {
-    padding-top: 1.5rem;
-    font-size: 14px;
+const useStyles = makeStyles({
+  p: {
+    paddingTop: '1.5rem',
+    fontSize: '14px',
+  },
 
-    a {
-      display: inline;
-      color: pink;
-      /* text-align: right; */
-      /* align-items: right; */
-    }
-  }
-`;
+  a: {
+    display: 'inline',
+    color: 'pink !important',
+  },
+});
 
 const SleepGuid = () => {
+  const classes = useStyles();
+
   const isPc = useMediaQuery({
     query: '(min-width: 1028px)',
   });
@@ -143,21 +135,23 @@ const SleepGuid = () => {
   });
 
   return (
-    <div>
-      <GuidInfo>
-        <p>수면은 일반적으로 얕은 수면(REM)과 깊은 수면(non-REM)으로 이루어져 있습니다.</p>
-        <p>아래 차트는 일반적인 수면 주기로 렘수면과 논렘 수면이 주기로 반복되어 잠을 자게 됩니다.</p>
-        <p>우리가 잠을 조금만 자야 한다면 얕은 수면(REM) 단계에서 일어나면 조금 덜 피곤하게 기상할 수 있게 됩니다. </p>
-        <p>
-          * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에
-          <br />
-          +-5~30분 정도의 차이를 둬서 자신에게 맞는 수면 주기를 계산하여 찾는 걸 추천드립니다.
-          <a href="https://allinfom.tistory.com/"> (참고 자료)</a>
-        </p>
-      </GuidInfo>
+    <ViewContainer>
+      <p>수면은 일반적으로 얕은 수면(REM)과 깊은 수면(non-REM)으로 이루어져 있습니다.</p>
+      <p>아래 차트는 일반적인 수면 주기로 렘수면과 논렘 수면이 주기로 반복되어 잠을 자게 됩니다.</p>
+      <p>우리가 잠을 조금만 자야 한다면 얕은 수면(REM) 단계에서 일어나면 조금 덜 피곤하게 기상할 수 있게 됩니다. </p>
+      <p className={classes.p}>
+        * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에
+        <br />
+        +-5~30분 정도의 차이를 둬서 자신에게 맞는 수면 주기를 계산하여 찾는 걸 추천드립니다.
+        <a href="https://devhwan.tech/" className={classes.a}>
+          {' '}
+          (참고 자료)
+        </a>
+      </p>
+
       {isPc && <CycleChart data={chartData} options={options} />}
       {isMobile && <CycleChart data={chartData} options={mOptions} />}
-    </div>
+    </ViewContainer>
   );
 };
 

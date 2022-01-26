@@ -13,6 +13,15 @@ import { useMediaQuery } from 'react-responsive';
 interface NavProps {
   navBar: string;
 }
+
+interface ThemeProps {
+  theme: Theme;
+}
+
+interface ColorProps {
+  color: string;
+}
+
 const NavContainer = styled('nav')<NavProps>`
   width: 100%;
   height: 63px;
@@ -39,10 +48,6 @@ const NavContentContainer = styled.div`
   transition: all 0.5s ease-in-out;
 `;
 
-interface ColorProps {
-  color: string;
-}
-
 const TitleContainer = styled('header')<ColorProps>`
   height: 100%;
   font-size: 2rem;
@@ -67,20 +72,14 @@ const InfoContainer = styled.div`
   transition: all 0.5s ease-in-out;
 `;
 
-interface ThemeProps {
-  theme: Theme;
-}
-
 const PlayStore = styled('button')<ThemeProps>`
   border-radius: 30px;
   font-size: 14px;
-  color: ${({ theme }) => theme.text};
 `;
 
 const Appstore = styled('button')<ThemeProps>`
   border-radius: 30px;
   font-size: 14px;
-  color: ${({ theme }) => theme.text};
 `;
 
 function Expected() {

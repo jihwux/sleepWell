@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://sleepfit.site',
-  generateRobotsTxt: true,
+  siteUrl: 'https://sleepcycle.tech',
+  // generateRobotsTxt: true,
   sitemapSize: 70,
 };
