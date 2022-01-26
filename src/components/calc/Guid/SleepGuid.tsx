@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
 import CycleChart from './CycleChart';
 import ViewContainer from '../../common/Guidinfo';

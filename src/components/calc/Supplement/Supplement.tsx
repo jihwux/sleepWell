@@ -78,13 +78,19 @@ const Supplement = () => {
             <ProductContainer>
               <IherbProduct>
                 <ProductImage>
-                  <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567?rcode=WDM312">
+                  <a
+                    rel="sponsored"
+                    href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567?rcode=WDM312"
+                  >
                     <Image src={Magnesium} width={100} height={100} placeholder="blur" alt="image with blur support" />
                   </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  <a href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567?rcode=WDM312">
+                  <a
+                    rel="sponsored"
+                    href="https://kr.iherb.com/pr/doctor-s-best-high-absorption-magnesium-100-chelated-with-albion-minerals-100-mg-240-tablets/16567?rcode=WDM312"
+                  >
                     Doctor Best, 100% 킬레이트화 고흡수 마그네슘, 100mg, 240정
                   </a>
                   <br />
@@ -98,13 +104,19 @@ const Supplement = () => {
               </IherbProduct>
               <IherbProduct>
                 <ProductImage>
-                  <a href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418?rcode=WDM312">
+                  <a
+                    rel="sponsored"
+                    href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418?rcode=WDM312"
+                  >
                     <Image src={Tryptophan} width={100} height={100} placeholder="blur" alt="image with blur support" />
                   </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  <a href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418?rcode=WDM312">
+                  <a
+                    rel="sponsored"
+                    href="https://kr.iherb.com/pr/now-foods-l-tryptophan-double-strength-1-000-mg-60-tablets/18418?rcode=WDM312"
+                  >
                     Now Foods, L-트립토판, 두 배 강도, 1,000mg, 60정
                   </a>
                   <br />
@@ -120,13 +132,19 @@ const Supplement = () => {
 
               <IherbProduct>
                 <ProductImage>
-                  <a href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283?rcode=WDM312">
+                  <a
+                    rel="sponsored"
+                    href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283?rcode=WDM312"
+                  >
                     <Image src={Theanine} width={100} height={100} placeholder="blur" alt="image with blur support" />
                   </a>
                 </ProductImage>
 
                 <ProductTitle>
-                  <a href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283?rcode=WDM312">
+                  <a
+                    rel="sponsored"
+                    href="https://kr.iherb.com/pr/california-gold-nutrition-l-theanine-alphawave-supports-relaxation-calm-focus-100-mg-60-veggie-capsules/83283?rcode=WDM312"
+                  >
                     Gold Nutrition, L-테아닌, 알파웨이브, 긴장 완화 효과, 진정 및 집중 효과, 100mg, 베지 캡슐 60정
                   </a>
                   <br />

@@ -2,12 +2,8 @@
 User-agent: *
 Allow: /
 
-
 # Host
-Host: https://sleepfit.site
+Host: https://sleepcycle.tech
 
 # Sitemaps
-Sitemap: https://sleepfit.site/sitemap.xml
-
-
-Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebit/53.7.36 (KHTML, like Gecko) Chrome/63.0.3239.0 Safari/537.36 (compatible; Yeti/1.1; +http://naver.me/spd)
+Sitemap: https://sleepcycle.tech/sitemap.xml

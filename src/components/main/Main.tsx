@@ -128,9 +128,7 @@ const Main: NextPage = () => {
         <p>아침에 일어날 때 항상 피곤하셨나요?</p>
         <p>편하게 일어날 수 있는 시간을 계산해 보세요!</p>
         <StartButton theme={theme}>
-          <Link href="../calc/">
-            <a>Start</a>
-          </Link>
+          <Link href="../calc/">Start</Link>
         </StartButton>
       </MainContent>
       <SunMoon theme={theme} />

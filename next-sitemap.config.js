@@ -1,5 +1,5 @@
 module.exports = {
   siteUrl: 'https://sleepcycle.tech',
-  generateRobotsTxt: true,
+  // generateRobotsTxt: true,
   sitemapSize: 70,
 };
