@@ -9,16 +9,24 @@ const MomentContent = styled.div`
   line-height: 2rem;
 `;
 
+// const PadStyle = {
+//   paddingTop: 'rem',
+// };
+
+const Strong = {
+  fontSize: '1.5rem',
+};
+
 const SleepCurrentCalc = () => {
   return (
     <ViewContainer>
       <h2>
         아래 현재 시각으로 계산되어 있는 시간은 일반적인 6단계의 수면주기 단계이며 아래 시간대에 일어나면 좀 더 편하게
         일어날 수 있습니다. <br />
-        보통 잠들기까지 평균 10~20분이 걸리며 4단계 ~ 6단계 주기가 적정한 수면 시간입니다.
+        <p> 보통 잠들기까지 평균 10~20분이 걸리며 4단계 ~ 6단계 주기가 적정한 수면 시간입니다.</p>
         <br />
       </h2>
-      <h2>
+      <h2 style={Strong}>
         현재시각 : <Moment format="A hh:mm" />
       </h2>
       <MomentContent>

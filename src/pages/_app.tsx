@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 import React, { createContext } from 'react';
 import Header from '../components/common/Header';
 import { GlobalStyle } from '../styles/global-styles';
@@ -25,6 +26,9 @@ const app = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <>
+        <Head>
+          <meta name="viewport" content="initial-scale=1, width=device-width" />
+        </Head>
         <NextSeo
           title="꿀잠"
           description="바쁜 당신을 위한 수면 계산기"

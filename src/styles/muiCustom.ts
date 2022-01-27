@@ -75,7 +75,13 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
         
     }
     .MuiPickersToolbar-toolbarLandscape {
-        
+        width: 47% ;
+
+        @media only screen and (max-width: 385px) {
+          width: 42% ;
+
+      }  
+
       padding: 0 !important;
     }
     .css-1qd6l8g{
@@ -101,7 +107,7 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
       
       .MuiPickerView-root{
         @media only screen and (max-width: 768px) {
-            width: 230px;
+            width: 215px;
         }
       }
       
