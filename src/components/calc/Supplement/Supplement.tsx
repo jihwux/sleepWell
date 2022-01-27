@@ -29,6 +29,14 @@ const InfoContent = styled.div`
     display: flex;
   }
 `;
+const IntroContent = styled.div`
+  span {
+    @media only screen and (max-width: 768px) {
+      display: block;
+      padding-top: 2rem;
+    }
+  }
+`;
 
 const IherbProduct = styled.div`
   display: -webkit-inline-box;
@@ -65,12 +73,17 @@ const Supplement = () => {
 
   return (
     <ViewContainer scrollHeight>
-      <p>
-        불면증이 심하거나 시차 적응 혹은 낮과 밤이 바뀌어 정상적인 생활이 안될 경우에 삶의 질이 떨어집니다. 약물에
-        도움을 받는다면 가까운 내과에 방문하여 처방을 받을 수 있는 수면제가 있으며, 단기적인 보조치료로 약국에서 쉽게
-        구매할 수 있는 수면유도제가 있습니다. 평소에는 수면에 도움이 되는 영양제를 복용하여 신체 리듬을 유지하는 게
-        좋습니다.
-      </p>
+      <IntroContent>
+        <p>
+          불면증이 심하거나 시차 적응 혹은 낮과 밤이 바뀌어 정상적인 생활이 안될 경우에 삶의 질이 떨어집니다.
+          <br />
+          <span>
+            약물에 도움을 받는다면 가까운 내과에 방문하여 처방을 받을 수 있는 수면제가 있으며, 단기적인 보조치료로
+            약국에서 쉽게 구매할 수 있는 수면유도제가 있습니다.
+          </span>
+          <br /> 평소에는 수면에 도움이 되는 영양제를 복용하여 신체 리듬을 유지하는 게 좋습니다.
+        </p>
+      </IntroContent>
       <InfoContent>
         <dl>
           <dt>영양제</dt>
