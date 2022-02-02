@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import palette from 'styles/palette';
 import ViewContainer from '../../common/Guidinfo';
 
 const InfoContent = styled.div`
@@ -9,7 +10,7 @@ const InfoContent = styled.div`
     font-size: 1rem;
     font-weight: 600;
     padding: 1rem 0;
-    color: #ffa5c5;
+    color: ${palette.subTitle};
   }
 
   dd {

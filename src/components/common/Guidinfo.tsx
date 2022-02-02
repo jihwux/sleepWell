@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import palette from 'styles/palette';
 
 export interface typeProps {
   color?: string;
@@ -16,7 +17,7 @@ const ViewContainer = styled.div<typeProps>`
     width: 2px;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #f50057;
+    background-color: ${palette.primary};
     border-radius: 50px;
     width: 0px;
   }

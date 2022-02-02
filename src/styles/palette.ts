@@ -1,14 +1,17 @@
 export default {
-  cardinal: '#a41850',
-  davidson_orange: '#c13515',
-  tawny: '#d93900',
-  amaranth: '#E51E53',
-  orange: '#fc642d',
+  primary: '#f50057',
+  subTitle: '#e75387',
   main_pink: '#FF385C',
-  bittersweet: '#ff5a5f',
   black: '#222222',
-  charcoal: '#484848',
-  snow: '#FFF8F6',
+
+  lightBg: '#fcfcfc',
+  lightText: '#fcfcfc',
+
+  darkText: '#363537',
+  darkBg: '#252424',
+
+  mainColor: '#fcfcfc',
+
   gray_48: '#484848',
   gray_71: '#717171',
   gray_76: '#767676',
@@ -23,6 +26,4 @@ export default {
   gray_e5: '#e5e5e5',
   gray_f7: '#f7f7f7',
   dark_cyan: '#008489',
-  green: '#008A05',
-  white: '#fff',
 };
