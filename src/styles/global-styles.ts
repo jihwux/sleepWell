@@ -26,14 +26,20 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         font-family: 'NanumSquare', sans-serif;
         background: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.text};
-        transition: all 0.5s ease-in-out;
+        overflow:hidden;
+        transition: color,background 0.25s ease-in;        
+    }
+
+    html,body {
+        height: 100%;
+        background: ${({ theme }) => theme.body};
+
     }
     button {
         background: none;
         cursor: pointer;
         border: none;
         outline: none;
-        transition: all 0.5s ease-in-out;
         color: ${({ theme }) => theme.text};
 
     }
@@ -45,10 +51,11 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         text-decoration: none;
         cursor: pointer;
         color: ${({ theme }) => theme.text};
-        transition: all 0.5s ease-in-out;
     }
     img {
         width: 100%;
         height: 100%;
     }
+
+    
 `;

@@ -42,7 +42,8 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
     }
     .MuiPickersStaticWrapper-root {
         background: ${({ theme }) => theme.body} !important;
-        transition: all 0.5s ease-in-out;
+        transition: color,background 0.25s ease-in;        
+
         flex-direction: initial !important;
     }
     .MuiClockNumber-root {
@@ -117,4 +118,26 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
         }
       }
     }
+
+
+    .MuiPickersToolbarButton-root {
+
+      padding: 0 !important;
+      @media only screen and (max-width: 768px) {
+      min-width:16px !important;
+      text-transform: none !important;
+    }    
+  }
+
+  .css-1b7xzdf-MuiInputBase-root-MuiInput-root:before {
+    border-bottom: 1px solid  ${({ theme }) => theme.text};
+
+  }
+  .MuiInput-input{
+    color: ${({ theme }) => theme.text};
+
+  }
+  .MuiFormHelperText-root {
+    color: ${({ theme }) => theme.text};
+  }
 `;

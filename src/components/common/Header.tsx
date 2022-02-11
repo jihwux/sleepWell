@@ -36,7 +36,7 @@ const NavContainer = styled('nav')<NavProps>`
   align-items: center;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
   background: ${({ navBar }) => navBar};
-  transition: all 0.5s ease-in-out;
+  transition: color, background 0.25s ease-in;
 `;
 
 const NavContentContainer = styled.div`
@@ -45,7 +45,6 @@ const NavContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.5s ease-in-out;
 `;
 
 const TitleContainer = styled('header')<ColorProps>`
@@ -61,7 +60,6 @@ const TitleContainer = styled('header')<ColorProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s ease-in-out;
 `;
 
 const InfoContainer = styled.div`
@@ -69,7 +67,6 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  transition: all 0.5s ease-in-out;
 `;
 
 const PlayStore = styled('button')<ThemeProps>`

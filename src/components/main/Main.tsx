@@ -5,13 +5,18 @@ import Link from 'next/link';
 import { ThemeContext } from '../../pages/_app';
 import { lightTheme, Theme } from '../../styles/theme';
 
-const Container = styled.div`
+interface ThemeProps {
+  theme: Theme;
+}
+
+const Container = styled('div')<ThemeProps>`
   width: 100%;
   display: flex;
   justify-content: space-between;
 `;
 const MainContent = styled.div`
   padding: 7rem 13rem;
+  z-index: 1;
   @media only screen and (max-width: 768px) {
     padding: 2.5rem 1rem 2.5rem 2.5rem;
   }
@@ -32,8 +37,14 @@ const MainContent = styled.div`
 `;
 
 const BackgroundContianer = styled('div')<ThemeProps>`
+  background-color: ${({ theme }) => theme.body};
   position: absolute;
   bottom: 0;
+  width: 100%;
+  transition: color, background 0.25s ease-in;
+`;
+
+const BackgroundContent = styled('div')<ThemeProps>`
   z-index: 1;
   width: 100%;
   height: 600px;
@@ -113,10 +124,6 @@ const StartButton = styled('button')<ThemeProps>`
   }
 `;
 
-interface ThemeProps {
-  theme: Theme;
-}
-
 const Main: NextPage = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -132,7 +139,9 @@ const Main: NextPage = () => {
         </StartButton>
       </MainContent>
       <SunMoon theme={theme} />
-      <BackgroundContianer theme={theme} />
+      <BackgroundContianer theme={theme}>
+        <BackgroundContent theme={theme} />
+      </BackgroundContianer>
     </Container>
   );
 };
