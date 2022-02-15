@@ -11,7 +11,7 @@ const ViewContainer = styled.div<typeProps>`
   font-size: 16px;
   line-height: 1.8rem;
   padding-left: 3rem;
-  height: ${(props) => (props.scrollHeight ? '700px' : 'auto')};
+  height: ${(props) => (props.scrollHeight ? 'calc(100vh - 220px)  ' : 'auto')};
   overflow-x: hidden;
   ::-webkit-scrollbar {
     width: 2px;
@@ -24,8 +24,9 @@ const ViewContainer = styled.div<typeProps>`
 
   @media only screen and (max-width: 768px) {
     padding-left: 0;
-    overflow: hidden;
-    height: auto;
+    ::-webkit-scrollbar {
+      width: 0;
+    }
 
     h1 {
       padding: 0.5rem 0;

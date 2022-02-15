@@ -37,6 +37,7 @@ const NavContainer = styled('nav')<NavProps>`
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
   background: ${({ navBar }) => navBar};
   transition: color, background 0.25s ease-in;
+  box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
 `;
 
 const NavContentContainer = styled.div`
