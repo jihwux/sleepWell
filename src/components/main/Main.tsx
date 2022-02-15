@@ -70,7 +70,7 @@ const BackgroundContent = styled('div')<ThemeProps>`
 `;
 
 const SunMoon = styled('div')<ThemeProps>`
-  margin: 3rem 5rem;
+  margin: 5rem;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.sunMoonBackground};
   box-shadow: ${({ theme }) => theme.sunMoon};

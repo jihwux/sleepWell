@@ -41,6 +41,8 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         border: none;
         outline: none;
         color: ${({ theme }) => theme.text};
+        transition: color,background 0.25s ease-in;        
+
 
     }
     ol, ul, li {
