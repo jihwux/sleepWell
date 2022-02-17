@@ -26,7 +26,6 @@ export const GlobalStyle = createGlobalStyle<ThemeInterface>`
         font-family: 'NanumSquare', sans-serif;
         background: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.text};
-        overflow:hidden;
         transition: color,background 0.25s ease-in;        
     }
 

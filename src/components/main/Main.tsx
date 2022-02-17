@@ -82,7 +82,6 @@ const SunMoon = styled('div')<ThemeProps>`
 
   @media only screen and (max-width: 768px) {
     margin: 3rem 3rem;
-    width: 90px;
   }
 
   @keyframes sunrise {
