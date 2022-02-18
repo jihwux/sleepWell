@@ -70,14 +70,21 @@ const InfoContainer = styled.div`
   align-items: center;
 `;
 
-const PlayStore = styled('button')<ThemeProps>`
-  border-radius: 30px;
-  font-size: 14px;
-`;
+// const PlayStore = styled('button')<ThemeProps>`
+//   border-radius: 30px;
+//   font-size: 14px;
+// `;
 
-const Appstore = styled('button')<ThemeProps>`
-  border-radius: 30px;
-  font-size: 14px;
+// const Appstore = styled('button')<ThemeProps>`
+//   border-radius: 30px;
+//   font-size: 14px;
+// `;
+
+const BrandTitle = styled.h1`
+  font-family: 'Jua';
+  padding-right: '5px';
+  font-weight: 400;
+  display: inline-block;
 `;
 
 function Expected() {
@@ -95,7 +102,7 @@ export default function Navigation() {
         <TitleContainer color={theme.mainColor}>
           <Link href="/">
             <a>
-              <span style={{ fontFamily: 'Jua', paddingRight: '5px', fontWeight: 400 }}>꿀잠</span>
+              <BrandTitle>꿀잠</BrandTitle>
               <Image src={BrandLogo} alt="PlayStore" width={40} height={40} placeholder="blur" />
             </a>
           </Link>

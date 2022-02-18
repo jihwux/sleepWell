@@ -63,6 +63,7 @@ export const MuiCustomStyle = createGlobalStyle<ThemeInterface>`
     }
     .css-1hbyad5-MuiTypography-root {
         color: #7c7c7c !important;
+        font-size: 0.65rem !important;
     }
 
     .MuiTypography-root {

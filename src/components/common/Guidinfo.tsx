@@ -28,16 +28,9 @@ const ViewContainer = styled.div<typeProps>`
       width: 0;
     }
 
-    h1 {
-      padding: 0.5rem 0;
-    }
     p {
       padding: 0.5rem 0;
     }
-  }
-
-  h1:nth-child(3) {
-    padding-top: 1rem;
   }
 `;
 const GuidInfo: React.FC<typeProps> = ({ children, ...props }) => {

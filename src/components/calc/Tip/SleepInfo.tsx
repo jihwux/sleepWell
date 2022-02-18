@@ -4,7 +4,7 @@ import palette from 'styles/palette';
 import ViewContainer from '../../common/Guidinfo';
 
 const InfoContent = styled.div`
-  padding-top: 3rem;
+  padding-top: 2rem;
 
   dt {
     font-size: 1rem;

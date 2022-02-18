@@ -25,12 +25,11 @@ const MainContent = styled.div`
     padding: 0.5rem 0rem;
     font-size: 16px;
   }
-
-  h1 {
+  h2 {
     font-size: 2rem;
     padding-bottom: 3rem;
   }
-  h2 {
+  h3 {
     font-size: 1.3rem;
     padding-bottom: 1rem;
   }
@@ -129,8 +128,8 @@ const Main: NextPage = () => {
   return (
     <Container>
       <MainContent>
-        <h2>조금 더 편한 아침을 위한</h2>
-        <h1>수면 계산기</h1>
+        <h3>조금 더 편한 아침을 위한</h3>
+        <h2>수면 계산기</h2>
         <p>아침에 일어날 때 항상 피곤하셨나요?</p>
         <p>편하게 일어날 수 있는 시간을 계산해 보세요!</p>
         <StartButton theme={theme}>

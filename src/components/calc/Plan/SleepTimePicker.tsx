@@ -35,7 +35,6 @@ const SleepTimePicker = () => {
 
   const handleChange = (value: Date | any) => {
     setValue(value); // value 사용자가 선택한 시간.
-    console.log(value);
   };
 
   const onClickTimeCalc = () => {
