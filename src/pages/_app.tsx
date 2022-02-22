@@ -38,10 +38,10 @@ const app = ({ Component, pageProps }: AppProps) => {
       <NextSeo
         title="꿀잠"
         description="바쁜 당신을 위한 수면 계산기"
-        canonical="https://sleepcycle.tech/"
+        canonical="https://www.sleepcycle.tech/"
         openGraph={{
           type: 'website',
-          url: 'https://sleepcycle.tech/',
+          url: 'https://www.sleepcycle.tech/',
           title: '꿀잠',
           description: '바쁜 당신을 위한 수면 계산기',
           images: [
