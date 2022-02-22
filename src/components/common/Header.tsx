@@ -82,7 +82,7 @@ const InfoContainer = styled.div`
 
 const BrandTitle = styled.h1`
   font-family: 'Jua';
-  padding-right: '5px';
+  padding-right: 5px;
   font-weight: 400;
   display: inline-block;
 `;

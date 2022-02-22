@@ -32,9 +32,9 @@ const app = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <Head>
+      {/* <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head>
+      </Head> */}
       <>
         <NextSeo
           title="꿀잠"

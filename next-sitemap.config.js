@@ -1,5 +1,5 @@
 module.exports = {
   siteUrl: 'https://sleepcycle.tech',
-  generateRobotsTxt: true, // false = link preivew not working
+  // generateRobotsTxt: true, // false
   sitemapSize: 70,
 };
