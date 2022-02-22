@@ -35,37 +35,39 @@ const app = ({ Component, pageProps }: AppProps) => {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <NextSeo
-        title="꿀잠"
-        description="바쁜 당신을 위한 수면 계산기"
-        canonical="https://www.sleepcycle.tech/"
-        openGraph={{
-          type: 'website',
-          url: 'https://www.sleepcycle.tech/',
-          title: '꿀잠',
-          description: '바쁜 당신을 위한 수면 계산기',
-          images: [
-            {
-              url: '/images/brandThum.png',
-              width: 600,
-              height: 300,
-              alt: '램수면 걔산기',
-              type: 'image/png',
-            },
-          ],
-          site_name: '꿀잠',
-        }}
-        twitter={{
-          handle: '@handle',
-          site: '@site',
-          cardType: 'summary_large_image',
-        }}
-      />
-      <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
-      <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+      <>
+        <NextSeo
+          title="꿀잠"
+          description="바쁜 당신을 위한 수면 계산기"
+          canonical="https://sleepcycle.tech/"
+          openGraph={{
+            type: 'website',
+            url: 'https://sleepcycle.tech/',
+            title: '꿀잠',
+            description: '바쁜 당신을 위한 수면 계산기',
+            images: [
+              {
+                url: '/images/brandThum.png',
+                width: 600,
+                height: 300,
+                alt: '램수면 걔산기',
+                type: 'image/png',
+              },
+            ],
+            site_name: '꿀잠',
+          }}
+          twitter={{
+            handle: '@handle',
+            site: '@site',
+            cardType: 'summary_large_image',
+          }}
+        />
+        <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+        <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
 
-      <Header />
-      <Component {...pageProps} />
+        <Header />
+        <Component {...pageProps} />
+      </>
     </ThemeContext.Provider>
   );
 };
