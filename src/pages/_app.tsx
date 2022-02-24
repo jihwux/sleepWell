@@ -5,7 +5,7 @@ import Header from '../components/common/Header';
 import { GlobalStyle } from '../styles/global-styles';
 import { MuiCustomStyle } from '../styles/muiCustom';
 import { lightTheme, darkTheme, Theme } from '../styles/theme';
-import { NextSeo } from 'next-seo';
+// import { NextSeo } from 'next-seo';
 import { useDarkMode } from '../hooks/useDarkMode';
 
 interface ContextProps {
@@ -32,11 +32,10 @@ const app = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {/* <Head>
+      <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Head> */}
-      <>
-        <NextSeo
+      </Head>
+      {/* <NextSeo
           title="꿀잠"
           description="바쁜 당신을 위한 수면 계산기"
           canonical="https://sleepcycle.tech/"
@@ -61,13 +60,12 @@ const app = ({ Component, pageProps }: AppProps) => {
             site: '@site',
             cardType: 'summary_large_image',
           }}
-        />
-        <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
-        <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+        /> */}
+      <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+      <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
 
-        <Header />
-        <Component {...pageProps} />
-      </>
+      <Header />
+      <Component {...pageProps} />
     </ThemeContext.Provider>
   );
 };
