@@ -34,8 +34,11 @@ const app = ({ Component, pageProps }: AppProps) => {
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {/* <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+<<<<<<< HEAD
       </Head> */}
       <>
+=======
+>>>>>>> 30773eea35cf2761f26831492d698363a99a8ad4
         <NextSeo
           title="꿀잠"
           description="바쁜 당신을 위한 수면 계산기"
@@ -62,8 +65,14 @@ const app = ({ Component, pageProps }: AppProps) => {
             cardType: 'summary_large_image',
           }}
         />
+<<<<<<< HEAD
         <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
         <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+=======
+      </Head>
+      <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+      <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
+>>>>>>> 30773eea35cf2761f26831492d698363a99a8ad4
 
         <Header />
         <Component {...pageProps} />
