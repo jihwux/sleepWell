@@ -30,20 +30,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>꿀잠</title>
-          <meta name="description" content="바쁜 당신을 위한 수면 계산기" />
-          <meta property="og:url" content="https://sleepcycle.tech/" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="꿀잠" />
-          <meta property="og:description" content="바쁜 당신을 위한 수면 계산기" />
-          <meta property="og:image" content=".//images/brandThum.png" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta property="twitter:domain" content="" />
-          <meta property="twitter:url" content="https://sleepcycle.tech/" />
-          <meta name="twitter:title" content="꿀잠" />
-          <meta name="twitter:description" content="바쁜 당신을 위한 수면 계산기" />
-          <meta name="twitter:image" content=".//images/brandThum.png" />
-
           <meta name="naver-site-verification" content="f9452db307d2fe8e78df07952649bb7ec8442416" />
           <meta name="google-site-verification" content="xE71eHQcrVsYzKTZnn_sv4wh_Q7Yay6_8dfiaG_ao5g" />
           <link rel="icon" href=".//favicon.ico" />
