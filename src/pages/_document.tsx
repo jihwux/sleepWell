@@ -48,11 +48,17 @@ class MyDocument extends Document {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8286719596729035"
             crossOrigin="anonymous"
           ></script> */}
+          <script
+            async
+            type="text/javascript"
+            src="https://t1.daumcdn.net/kas/static/ba.min.js"
+            defer
+            data-nscript="beforeInteractive"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script async type="text/javascript" src="http://t1.daumcdn.net/kas/static/ba.min.js" />
         </body>
       </Html>
     );
