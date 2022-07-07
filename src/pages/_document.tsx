@@ -1,5 +1,6 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -52,7 +53,11 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-        <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+        <Script
+          type="text/javascript"
+          src="//t1.daumcdn.net/kas/static/ba.min.js"
+          strategy="beforeInteractive"
+        ></Script>
       </Html>
     );
   }
