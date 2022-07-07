@@ -47,7 +47,7 @@ export function GoogleAd({ variant = AdType.DEFAULT }: GoogleAdProps) {
       <ins
         className="kakao_ad_area"
         style={{ display: 'none', width: '100%' }}
-        data-ad-unit="DAN-OrzxII7GdStWCMul"
+        data-ad-unit="DAN-XMrHaF92tU3e4gWf"
         data-ad-width="160"
         data-ad-height="600"
       ></ins>
