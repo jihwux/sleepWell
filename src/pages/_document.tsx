@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -52,12 +52,8 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script async type="text/javascript" src="http://t1.daumcdn.net/kas/static/ba.min.js" />
         </body>
-        <Script
-          type="text/javascript"
-          src="//t1.daumcdn.net/kas/static/ba.min.js"
-          strategy="beforeInteractive"
-        ></Script>
       </Html>
     );
   }
