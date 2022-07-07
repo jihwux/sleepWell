@@ -47,6 +47,7 @@ class MyDocument extends Document {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8286719596729035"
             crossOrigin="anonymous"
           ></script> */}
+          <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
         </Head>
         <body>
           <Main />
