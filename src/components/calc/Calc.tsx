@@ -13,6 +13,7 @@ import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
 import GoogleAd from '../common/GoogleAd';
+import AdFit from 'components/common/AdFit';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -113,13 +114,13 @@ const Calc = () => {
           <TabPanel value={value} index={4} className={classes.tabs}>
             <Supplement />
           </TabPanel>
-          {/* <Box
+          <Box
             sx={{
               width: '30%',
             }}
           >
-            <GoogleAd />
-          </Box> */}
+            <AdFit />
+          </Box>
         </Box>
       )}
 

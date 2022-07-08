@@ -1,6 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import Script from 'next/script';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -47,6 +48,7 @@ class MyDocument extends Document {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8286719596729035"
             crossOrigin="anonymous"
           ></script> */}
+          <script type="text/javascript" src="https://t1.daumcdn.net/kas/static/ba.min.js" />
         </Head>
         <body>
           <Main />
