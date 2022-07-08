@@ -26,6 +26,7 @@ const adUnitProps: Record<AdType, any> = {
     'data-full-width-responsive': 'true',
   },
 };
+
 export function GoogleAd({ variant = AdType.DEFAULT }: GoogleAdProps) {
   useEffect(() => {
     try {
@@ -44,13 +45,13 @@ export function GoogleAd({ variant = AdType.DEFAULT }: GoogleAdProps) {
         data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE}
         {...adUnitProps[variant]}
       /> */}
-      <ins
+      {/* <ins
         className="kakao_ad_area"
         style={{ display: 'none', width: '100%' }}
         data-ad-unit="DAN-XMrHaF92tU3e4gWf"
         data-ad-width="160"
         data-ad-height="600"
-      ></ins>
+      ></ins> */}
     </div>
   );
 }
