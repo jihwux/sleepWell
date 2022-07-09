@@ -5623,14 +5623,9 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001173, caniuse-lite@^1.0.30001254, caniuse-lite@^1.0.30001283:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001173, caniuse-lite@^1.0.30001254, caniuse-lite@^1.0.30001283, caniuse-lite@^1.0.30001363:
   version "1.0.30001363"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001363.tgz"
-  integrity sha512-HpQhpzTGGPVMnCjIomjt+jvyUu8vNFo3TaDiZ/RcoTrlOq/5+tC8zHdsbgFB6MxmaY+jCpsH09aD80Bb4Ow3Sg==
-
-caniuse-lite@^1.0.30001363:
-  version "1.0.30001363"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001363.tgz#26bec2d606924ba318235944e1193304ea7c4f15"
   integrity sha512-HpQhpzTGGPVMnCjIomjt+jvyUu8vNFo3TaDiZ/RcoTrlOq/5+tC8zHdsbgFB6MxmaY+jCpsH09aD80Bb4Ow3Sg==
 
 capture-exit@^2.0.0:
@@ -15064,6 +15059,11 @@ re2@^1.15.8:
     install-artifact-from-github "^1.2.0"
     nan "^2.15.0"
     node-gyp "^8.4.1"
+
+react-adfit-web-component@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-adfit-web-component/-/react-adfit-web-component-1.0.2.tgz#a8e158dc3d782d65a6990cf5f7b4a0afa52d3770"
+  integrity sha512-mHcsdd63LuebegYhUJbbwOktaMfzyUZmUkz+0uOaJJ2ri2U/nLLV3tttTb+yyMRMcwVGmJWH2IAmo5ljU4TB1g==
 
 react-app-polyfill@^2.0.0:
   version "2.0.0"

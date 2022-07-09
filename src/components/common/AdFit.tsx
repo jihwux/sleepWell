@@ -6,7 +6,7 @@ export function AdFit() {
       <ins
         className="kakao_ad_area"
         style={{ display: 'none', width: '100%' }}
-        data-ad-unit="DAN-SaI0rUuyCScVLaG9"
+        data-ad-unit="DAN-hJh9Obf3OtboDnTl"
         data-ad-width="160"
         data-ad-height="600"
       ></ins>
