@@ -119,9 +119,9 @@ const Calc = () => {
               width: '30%',
             }}
           >
-            <GoogleAd />
+            {/* <GoogleAd /> */}
+            <AdFit />
           </Box>
-          <AdFit />
         </Box>
       )}
 
