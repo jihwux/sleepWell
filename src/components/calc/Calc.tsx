@@ -115,9 +115,9 @@ const Calc = () => {
             <Supplement />
           </TabPanel>
           <Box
-            sx={{
-              width: '30%',
-            }}
+          // sx={{
+          //   width: '30%',
+          // }}
           >
             {/* <GoogleAd /> */}
             <AdFit />
@@ -170,6 +170,14 @@ const Calc = () => {
                 background: 'gray',
               }}
             ></Box> */}
+            <Box
+              sx={{
+                paddingTop: '3rem',
+              }}
+            >
+              {/* <GoogleAd /> */}
+              <AdFit />
+            </Box>
           </Box>
         </Container>
       )}

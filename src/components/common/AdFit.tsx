@@ -13,7 +13,7 @@ export function AdFit() {
   });
 
   return (
-    <div className="adfit" style={{ overflow: 'hidden', minWidth: '300px', minHeight: '250px' }}>
+    <div className="adfit">
       <ins
         className="kakao_ad_area"
         style={{ display: 'none', width: '100%' }}
