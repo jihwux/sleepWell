@@ -3,7 +3,6 @@ import dotenv from 'dotenv';
 import { useMediaQuery } from 'react-responsive';
 
 export function AdFit() {
-  dotenv.config();
   const isPc = useMediaQuery({
     query: '(min-width: 1028px)',
   });
