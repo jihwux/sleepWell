@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import dotenv from 'dotenv';
 import { useMediaQuery } from 'react-responsive';
 
 export function AdFit() {
@@ -29,7 +28,7 @@ export function AdFit() {
           <ins
             className="kakao_ad_area"
             style={{ display: 'none', width: '100%', background: 'blue' }}
-            data-ad-unit={process.env.NEXT_PUBLIC_KAKAO_ADFIT_DEV}
+            data-ad-unit="DAN-hJh9Obf3OtboDnTl"
             data-ad-width="160"
             data-ad-height="600"
           ></ins>
