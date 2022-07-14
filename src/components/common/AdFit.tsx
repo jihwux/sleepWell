@@ -28,7 +28,7 @@ export function AdFit() {
           <ins
             className="kakao_ad_area"
             style={{ display: 'none', width: '100%', background: 'blue' }}
-            data-ad-unit={process.env.NEXT_PUBLIC_KAKAO_ADFIT_DEV}
+            data-ad-unit={process.env.NEXT_PUBLIC_KAKAO_ADFIT}
             data-ad-width="160"
             data-ad-height="600"
           ></ins>
@@ -39,7 +39,7 @@ export function AdFit() {
           <ins
             className="kakao_ad_area"
             style={{ display: 'none', width: '100%', background: 'red' }}
-            data-ad-unit={process.env.NEXT_PUBLIC_KAKAO_ADFIT_DEV_SEQUARE}
+            data-ad-unit={process.env.NEXT_PUBLIC_KAKAO_ADFIT_SEQUARE}
             data-ad-width="300"
             data-ad-height="250"
           ></ins>
