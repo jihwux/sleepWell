@@ -143,10 +143,6 @@ const SleepGuid = () => {
         * 수면 주기는 개인마다 차이가 있으므로 계산한 수면 주기가 맞지 않을 경우에
         <br />
         +-5~30분 정도의 차이를 둬서 자신에게 맞는 수면 주기를 계산하여 찾는 걸 추천드립니다.
-        {/* <a href="https://devhwan.tech/" className={classes.a}>
-          {' '}
-          (참고 자료)
-        </a> */}
       </p>
 
       {isPc && <CycleChart data={chartData} options={options} />}

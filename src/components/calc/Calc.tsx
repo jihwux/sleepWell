@@ -14,6 +14,7 @@ import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
 import GoogleAd from '../common/GoogleAd';
 import AdFit from 'components/common/AdFit';
+import NewsList from 'components/news/NewsList';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -83,7 +84,7 @@ const Calc = () => {
           sx={{
             flexGrow: 1,
             display: 'flex',
-            height: 224,
+            // height: 224,
           }}
         >
           <Tabs
@@ -98,6 +99,7 @@ const Calc = () => {
             <Tab label="이때 자면?" {...a11yProps(2)} />
             <Tab label="기타 요법" {...a11yProps(3)} />
             <Tab label="보조 약물 " {...a11yProps(4)} />
+            <Tab label="수면뉴스 " {...a11yProps(5)} />
           </Tabs>
           <TabPanel value={value} index={0} className={classes.tabs}>
             <SleepGuid />
@@ -113,6 +115,9 @@ const Calc = () => {
           </TabPanel>
           <TabPanel value={value} index={4} className={classes.tabs}>
             <Supplement />
+          </TabPanel>
+          <TabPanel value={value} index={5} className={classes.tabs}>
+            <NewsList />
           </TabPanel>
           <Box
           // sx={{
@@ -142,6 +147,7 @@ const Calc = () => {
               <Tab label="이때 자면?" {...a11yProps(2)} />
               <Tab label="기타 요법" {...a11yProps(3)} />
               <Tab label="보조 약물 " {...a11yProps(4)} />
+              <Tab label="수면뉴스 " {...a11yProps(5)} />
             </Tabs>
             <SwipeableViews
               axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -162,6 +168,9 @@ const Calc = () => {
               </TabPanel>
               <TabPanel value={value} index={4} dir={theme.direction}>
                 <Supplement />
+              </TabPanel>
+              <TabPanel value={value} index={5} dir={theme.direction}>
+                <NewsList />
               </TabPanel>
             </SwipeableViews>
             {/* <Box
