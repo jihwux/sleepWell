@@ -14,13 +14,13 @@ export const useDarkMode = () => {
   };
 
   useEffect(() => {
+    // 사용자의 시스템 환경에서 다크 모드를 지원하는지 확인
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     const localTheme = window.localStorage.getItem('theme');
-    if (localTheme !== null) {
-      if (localTheme === 'dark') {
-        setTheme(darkTheme);
-      } else {
-        setTheme(lightTheme);
-      }
+    if (localTheme === 'dark' || (prefersDarkMode && localTheme !== 'light')) {
+      setTheme(darkTheme);
+    } else {
+      setTheme(lightTheme);
     }
   }, []);
 

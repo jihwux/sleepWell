@@ -2,6 +2,16 @@ const withImages = require('next-images');
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
 
+// module.exports = {
+//   async rewrites() {
+//     return [
+//       {
+//         destination: 'https://openapi.naver.com/v1/search/:path*',
+//       },
+//     ];
+//   },
+// };
+
 module.exports = withImages({
   images: {
     disableStaticImages: true,
