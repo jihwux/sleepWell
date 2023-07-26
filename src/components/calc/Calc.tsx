@@ -12,7 +12,6 @@ import SleepInfo from './Tip/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
-import GoogleAd from '../common/GoogleAd';
 import AdFit from 'components/common/AdFit';
 import NewsList from 'components/news/NewsList';
 
@@ -119,11 +118,7 @@ const Calc = () => {
           <TabPanel value={value} index={5} className={classes.tabs}>
             <NewsList />
           </TabPanel>
-          <Box
-          // sx={{
-          //   width: '30%',
-          // }}
-          >
+          <Box>
             {/* <GoogleAd /> */}
             <AdFit />
           </Box>
@@ -173,18 +168,11 @@ const Calc = () => {
                 <NewsList />
               </TabPanel>
             </SwipeableViews>
-            {/* <Box
-              sx={{
-                height: 224,
-                background: 'gray',
-              }}
-            ></Box> */}
             <Box
               sx={{
                 paddingTop: '3rem',
               }}
             >
-              {/* <GoogleAd /> */}
               <AdFit />
             </Box>
           </Box>

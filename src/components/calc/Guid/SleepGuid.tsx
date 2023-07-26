@@ -2,7 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import CycleChart from './CycleChart';
 import ViewContainer from '../../common/Guidinfo';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles';
 
 const chartData = {
   labels: ['자정', '1', '2', '3', '4', '5', '6', '7', '8'],
