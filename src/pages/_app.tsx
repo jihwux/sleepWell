@@ -78,7 +78,6 @@ const app = ({ Component, pageProps }: AppProps) => {
         /> */}
       <GlobalStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
       <MuiCustomStyle theme={theme === lightTheme ? lightTheme : darkTheme} />
-
       <Header />
       <Component {...pageProps} />
     </ThemeContext.Provider>
