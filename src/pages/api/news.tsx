@@ -16,7 +16,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const items = [];
     const response = await fetch(
-      `${API_ENDPOINT}/v1/search/news.json?query=${query}&display=${display}&start=${(page - 1) * display + 1}`,
+      `${API_ENDPOINT}/v1/search/news.json?query=${query}&display=${display}&start=${
+        (page - 1) * display + 1
+      }&sort=sim`,
       {
         headers: {
           'X-Naver-Client-Id': client_id,

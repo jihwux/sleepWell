@@ -13,7 +13,7 @@ import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
 import AdFit from 'components/common/AdFit';
-import NewsList from 'components/news/NewsList';
+import NewsList from 'components/calc/News/NewsList';
 
 interface TabPanelProps {
   children?: React.ReactNode;

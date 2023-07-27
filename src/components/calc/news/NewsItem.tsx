@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, Suspense } from 'react';
+// import second from 'first'
 import styled from 'styled-components';
 
 // interface

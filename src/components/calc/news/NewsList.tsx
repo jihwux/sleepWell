@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
+
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -67,12 +68,21 @@ const NewsList = () => {
     };
   }, [articles]);
 
-  if (loading && articles.length === 0) return <div>Loading...</div>;
+  if (loading && articles.length === 0) {
+    return (
+      <SpinnerContainer>
+        <SpinnerIcon icon={faSpinner} spin />
+      </SpinnerContainer>
+    );
+  }
+
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
+      {/* <Suspense fallback={<div>loaasasd</div>}> */}
       <NewsItem articles={articles} />
+      {/* </Suspense> */}
     </div>
   );
 };
