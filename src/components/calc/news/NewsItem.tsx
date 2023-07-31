@@ -1,5 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
-// import second from 'first'
+import React from 'react';
 import styled from 'styled-components';
 
 // interface
@@ -11,6 +10,10 @@ interface NewsArticle {
   linkToImage: any;
   src: string;
 }
+const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+  event.currentTarget.onerror = null; //
+  event.currentTarget.src = 'images/—Pngtree—breaking news banner lower_5550356.png';
+};
 
 const NewsItem: React.FC<{ articles: NewsArticle[] }> = ({ articles }) => {
   return (
@@ -19,7 +22,7 @@ const NewsItem: React.FC<{ articles: NewsArticle[] }> = ({ articles }) => {
         <NewsItemBlock key={index}>
           <div className="thumbnail">
             <a href={article.link} target="_blank" rel="noopener noreferrer">
-              <img src={article.src} alt="thumbnail" />
+              <img src={article.src} alt="" onError={(event) => handleImageError(event)} />
             </a>
           </div>
           <div className="contents">

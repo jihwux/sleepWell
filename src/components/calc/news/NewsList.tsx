@@ -6,21 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import NewsItem from './NewsItem';
 
-const SpinnerContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
-  flex-direction: column;
-  color: #ff69b4;
-`;
-
-const SpinnerIcon = styled(FontAwesomeIcon)`
-  font-size: 2rem;
-  color: inherit; //상속
-  margin-bottom: 10px;
-`;
-
 interface NewsArticle {
   title: string;
   description: string;
@@ -73,7 +58,7 @@ const NewsList = () => {
     }
   };
 
-  const throttledFetchMoreData = throttle(fetchNewArticles, 300);
+  const throttledFetchMoreData = throttle(fetchNewArticles, 500);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll); // 수정: 'scroll' 이벤트 리스너에 handleScroll 함수 사용
@@ -82,24 +67,15 @@ const NewsList = () => {
     };
   }, [articles]); // 수정: handleScroll 함수 변경 시 재등록
 
-  if (loading && articles.length === 0) {
-    return (
-      <SpinnerContainer>
-        <SpinnerIcon icon={faSpinner} spin />
-        <div>뉴스를 불러오는 중 입니다...</div>
-      </SpinnerContainer>
-    );
-  }
-
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
       <NewsItem articles={articles} />
-      {showLoading && (
+      {loading && (
         <SpinnerContainer>
           <SpinnerIcon icon={faSpinner} spin />
-          <div>뉴스를 불러오는 중 입니다...</div>
+          <div>{articles.length > 0 ? '마지막 뉴스를 불러오고 있습니다...' : '뉴스를 불러오는 중 입니다...'}</div>
         </SpinnerContainer>
       )}
     </div>
@@ -107,3 +83,18 @@ const NewsList = () => {
 };
 
 export default NewsList;
+
+const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+  color: #ff69b4;
+`;
+
+const SpinnerIcon = styled(FontAwesomeIcon)`
+  font-size: 2rem;
+  color: inherit; //상속
+  margin-bottom: 10px;
+`;
