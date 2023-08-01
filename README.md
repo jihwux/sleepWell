@@ -1,8 +1,8 @@
 <br>
 
-
-![image](https://github.com/devhwann/sleepWell/assets/37394823/88307e4d-abee-4118-8c94-d9624630c5fd)
+![Untitled](https://github.com/devhwann/sleepWell/assets/37394823/e86974cf-4053-4b65-a572-71dec23e9bf1)
 <br>
+
 <br>
 
 # 꿀잠 
