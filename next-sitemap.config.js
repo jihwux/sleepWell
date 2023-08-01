@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://sleepcycle.tech',
-  // generateRobotsTxt: true, // false
+  siteUrl: 'https://sleepwell.kr',
+  generateRobotsTxt: true, // false
   sitemapSize: 70,
 };

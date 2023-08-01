@@ -28,7 +28,7 @@ const NewsList = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`/api/news?page=${page}`);
+      const response = await fetch(`/api/getNews?page=${page}`);
       const data = await response.json();
 
       // 중복 기사 제거를 위해 Set 객체를 사용합니다.

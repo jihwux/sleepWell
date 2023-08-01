@@ -12,8 +12,8 @@ import SleepInfo from './Tip/SleepInfo';
 import { useMediaQuery } from 'react-responsive';
 import SleepGuid from './Guid/SleepGuid';
 import Supplement from './Supplement/Supplement';
-import AdFit from 'components/common/AdFit';
 import NewsList from './News/NewsList';
+import AdFit from 'components/common/AdFit';
 
 interface TabPanelProps {
   children?: React.ReactNode;
