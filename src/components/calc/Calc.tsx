@@ -97,7 +97,7 @@ const Calc = () => {
             <Tab label="지금 자면?" {...a11yProps(1)} />
             <Tab label="이때 자면?" {...a11yProps(2)} />
             <Tab label="기타 요법" {...a11yProps(3)} />
-            <Tab label="보조 약물 " {...a11yProps(4)} />
+            {/* <Tab label="보조 약물 " {...a11yProps(4)} /> */}
             <Tab label="수면뉴스 " {...a11yProps(5)} />
           </Tabs>
           <TabPanel value={value} index={0} className={classes.tabs}>
@@ -113,14 +113,13 @@ const Calc = () => {
             <SleepInfo />
           </TabPanel>
           <TabPanel value={value} index={4} className={classes.tabs}>
-            <Supplement />
-          </TabPanel>
-          <TabPanel value={value} index={5} className={classes.tabs}>
+            {/* <Supplement /> */}
             <NewsList />
           </TabPanel>
+          <TabPanel value={value} index={5} className={classes.tabs}></TabPanel>
           <Box>
             {/* <GoogleAd /> */}
-            <AdFit />
+            {/* <AdFit /> */}
           </Box>
         </Box>
       )}
